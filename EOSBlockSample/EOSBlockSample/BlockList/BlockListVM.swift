@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import EosioSwift
+
+typealias EOSIOGetBlockDataAndResponse = (Data, EosioRpcBlockResponse)
 
 protocol BlockListVMContract: class {
     var loadedBlocks: [EOSIOGetBlockDataAndResponse] { get }
@@ -17,20 +20,23 @@ protocol BlockListVMContract: class {
 final class BlockListVM: BlockListVMContract {
     enum BlockListVMError: Error, CustomStringConvertible {
         case strongSelfFailure
+        case blockResponseCastFailure
         
         var description: String {
             switch self {
             case .strongSelfFailure:
                 return "Failed to obtain a reference to self"
+            case .blockResponseCastFailure:
+                return "The returned block response object is not of the type EosioRpcBlockResponse"
             }
         }
     }
     
-    private let providerType: EOSIORpcApiProviderContract.Type
+    private let provider: EosioRpcProviderProtocol
     var loadingCompletionBlock:((Error?) -> Void)?
     
-    init(providerType: EOSIORpcApiProviderContract.Type){
-        self.providerType = providerType
+    init(provider: EosioRpcProviderProtocol){
+        self.provider = provider
     }
     
     var loadedBlocks: [EOSIOGetBlockDataAndResponse] = []
@@ -59,7 +65,7 @@ final class BlockListVM: BlockListVMContract {
     private func getBlocks(maxCount: UInt, completion: @escaping ([EOSIOGetBlockDataAndResponse]?, Error?) -> ()) {
         DispatchQueue.global(qos: .default).async {
             // Get the chain info to retrieve the head block.
-            self.providerType.getInfo(timeout: 5) { [weak self] (info, error) in
+            self.provider.getInfo(completion: { [weak self] (infoResponse) in
                 guard let self = self else {
                     DispatchQueue.main.async {
                         completion(nil, BlockListVMError.strongSelfFailure)
@@ -67,49 +73,66 @@ final class BlockListVM: BlockListVMContract {
                     return
                 }
                 
-                if let info = info {
-                    print("Info retrieved.  Blockid = \(info.head_block_id)")
-                    // Get the head block.
-                    self.getBlock(blockID: info.head_block_id, maxCount: maxCount, blocks: [], completion: completion)
-                } else {
-                    // Failed to get a valid info object so end by calling completion.
+                switch infoResponse {
+                case .failure(let error):
                     DispatchQueue.main.async {
                         completion(nil, error)
                     }
+                case .success(let info):
+                    print("Info retrieved.  BlockNum = \(info.headBlockNum.value)")
+                    // Get the head block.
+                    self.getBlock(blockNum: info.headBlockNum.value, maxCount: maxCount, blocks: [], completion: completion)
                 }
-            }
+            })
         }
     }
     
-    private func getBlock(blockID: String, maxCount: UInt, blocks: [EOSIOGetBlockDataAndResponse], completion: @escaping ([EOSIOGetBlockDataAndResponse]?, Error?) -> ()) {
+    private func getBlock(blockNum: UInt64, maxCount: UInt, blocks: [EOSIOGetBlockDataAndResponse], completion: @escaping ([EOSIOGetBlockDataAndResponse]?, Error?) -> ()) {
         var blocks = blocks
-        let request = EOSIOGetBlockRequest(block_num_or_id: blockID)
-        // Get the block by blockID.
-        self.providerType.getBlock(blockRequest: request, timeout: 5){ [weak self] (block, error) in
-            guard let self = self else {
-                DispatchQueue.main.async {
-                    completion(nil, BlockListVMError.strongSelfFailure)
+        let blockRequest = EosioRpcBlockRequest(blockNumOrId: blockNum)
+        
+        self.provider.getBlock(requestParameters: blockRequest) { (result) in
+            switch result {
+            case .success(let blockResponse):
+                let data: Data
+                
+                // The detail view uses properties that are only available on the EosioRpcBlockResponse object not just the protocol.
+                // Make sure the blockResponse is an EosioRpcBlockResponse object.
+                guard let blockResponseObject = blockResponse as? EosioRpcBlockResponse else {
+                    completion(nil, BlockListVMError.blockResponseCastFailure)
+                    return
                 }
-                return
-            }
-            
-            if let block = block {
-                blocks.append(block)
-                print("Block: \(blocks.count) Previous: \(block.1.previous)")
+                
+                // Generate the JSON data.
+                if let rawJsonData = blockResponseObject._rawResponse as? [String : Any] {
+                    data = (try? JSONSerialization.data(withJSONObject: rawJsonData, options: .prettyPrinted)) ?? Data()
+                } else {
+                    data = Data()
+                }
+                
+                print("Block retrieved.  BlockNum=\(blockResponse.blockNum.value)")
+                // Store the retrieved block with accompaning JSON data.
+                blocks.append((data, blockResponseObject))
+                
                 if blocks.count == maxCount {
                     // maxCount has been hit, trigger completion.
                     DispatchQueue.main.async {
                         completion(blocks, nil)
                     }
                 } else {
-                    // maxCount has not been hit so fetch the previous block by id.
-                    self.getBlock(blockID: block.1.previous, maxCount: maxCount, blocks: blocks, completion: completion)
+                    let blockNumToGet = blockResponse.blockNum.value - 1
+                    if blockNumToGet < 1 {
+                        // Not a valid block num so end with what has been loaded.
+                        DispatchQueue.main.async {
+                            completion(blocks, nil)
+                        }
+                    } else {
+                        // maxCount has not been hit so fetch the previous block by block num.
+                        self.getBlock(blockNum: blockNumToGet, maxCount: maxCount, blocks: blocks, completion: completion)
+                    }
                 }
-            } else {
-                if let error = error {
-                    print("Error: \(error)")
-                }
-                // Failed to get a valid block so end by calling completion.
+                
+            case .failure(let error):
                 DispatchQueue.main.async {
                     completion(blocks, error)
                 }

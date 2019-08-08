@@ -1,0 +1,2128 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00F2E5A01C1D1C0EC3DEE1566B118463 /* EosioRpcProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD16668B90B8440BDCE075B7EEA000D /* EosioRpcProviderProtocol.swift */; };
+		01159D69B46B050F1013BB0D110AF6C1 /* hang.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D7B3DC95470F71FB61AB146B2B8975 /* hang.swift */; };
+		011C4938241842C1AB85347D5B1D9221 /* LogEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F67C86B8A9FEB4B2105AAE54BAEED /* LogEvent.swift */; };
+		01AEC4389DD57F0508C8B06203A84068 /* EosioResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A42DB9128B5096E9D0C17051710BDE /* EosioResult.swift */; };
+		022D58E7FD09B6078E82C0BA17D7A280 /* SipHash-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3CB6636FBBE3C837E776D9EEDE06CC /* SipHash-dummy.m */; };
+		034E659188309BBE64F59440771E3204 /* Shifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EABB67D211F34DAFCBB49E8EC69C72 /* Shifts.swift */; };
+		064F77E7396B6C3AB9B4AE74A570D7B5 /* Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E682734B1A8A25602D3DA72742574 /* Hashable.swift */; };
+		0A6384AD0EA6210E1C1F25AA6DA502B6 /* NSTask+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 043815A3BD91B2E21FCBB9E7235ACF1E /* NSTask+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AF605CD0F959D9E7B1C34805FC8793D /* EosioName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD6F1D1F17A55B50D06753C1C446AB /* EosioName.swift */; };
+		0B8E1BBB09D5498D203BC777ABF11F1E /* Integer Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EF0E2433554EFFEB34725B51FD177A /* Integer Conversion.swift */; };
+		0C5085EE26B312E50A649C78BEF752F7 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933AFF7FB2D29DA3C2937944A6AAF08 /* StringExtensions.swift */; };
+		12CD90EB44F6E0EA5BC7ED6D30ACD9A2 /* Words and Bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8700095FB96C8A4354B329868A0092CA /* Words and Bits.swift */; };
+		1646508813750E610B1A79E7947119FF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA90B85788C63E687A5C7D1F2E0DF36 /* Error.swift */; };
+		1964412C86CEA3BB0D30712B26599FF7 /* afterlife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCCB523FE475C0E8533AA0FB778773 /* afterlife.swift */; };
+		196E0AE5CE7DDEC1FACA203D304B4878 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD887CBB99A2659170A6EF71B66DA9 /* Box.swift */; };
+		1B9C61E5BAA6E3A408FFD4BD61BB4C8A /* BigInt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FAB30C5C824ABFACFF64179A8D7103 /* BigInt-dummy.m */; };
+		1BCB8099E879AAFB0CA8E5C14F31A7C2 /* BigUInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D631B5855DD79BDF8815B72F17FE3EC2 /* BigUInt.swift */; };
+		1C95C15C956134C05CC00F6C3282A96A /* SipHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62E6C50E2E254F9917B188E09E01573 /* SipHash.framework */; };
+		1CD46EA75AD8C5D0041A8E537198A49B /* EosioAbiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C93139BF2682BFD6D4681CACA7C08 /* EosioAbiProvider.swift */; };
+		1DC737F6B08AF2A1FE5457806456602A /* join.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3116D1D9AD41FAF671D82F5F33E7A6 /* join.m */; };
+		1FAD2F572D1E919BB9AB4F437B6EE6E7 /* PromiseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AC87A45B5B17BB7604EFF932AA87971 /* PromiseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24A271C86DB9EA2EEBBFE994D3AE4E8A /* SipHasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4E8535187C3617FA1F486D73554B22 /* SipHasher.swift */; };
+		262371DB02635DCA60CC73EFD438E78A /* EosioUInt64.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E6323E817AF8429DE506B2A9BE274 /* EosioUInt64.swift */; };
+		2630873B9B74EF9885DF64E5789CE8CF /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FD94EDEB1F387DE91433B0E0C6C813 /* Resolver.swift */; };
+		2AD6F205F9EF155653376A3F53373AB9 /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE97B4DDB086865E5C2D99B5757A274 /* DictionaryExtensions.swift */; };
+		2C06D529D0A984F155F3CF7ED2251961 /* DynamicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482BC3A2862136E1214307B2FBC517DC /* DynamicKey.swift */; };
+		2DB14C169854DB914A075BBCC54F078C /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94393F7C861CB3AA7B576698106367EE /* Queue.swift */; };
+		2E5FD2726D478A1D409A61EFC1C84CCE /* EosioTransactionAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894ED2600DD2757B723F8EABDAA30C83 /* EosioTransactionAction.swift */; };
+		3486EE18A5530E61B71991144CE1C904 /* AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = CAB4C9819767BB0BC8A7BF466EB3544F /* AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A9E28A207B438E8758D8C840E9D133F /* PMKFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5071DA24522CA38029A51E34CE0C6C6D /* PMKFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C3916156A3CBCFA0D786EC90D47FF05 /* PromiseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C89E57BEECB1F835F65AE8534EC0AEE1 /* PromiseKit-dummy.m */; };
+		3E8B4C8A9078745EDEDBE758AB219D29 /* Strideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265541E0970AB9F8F2A5A313383388D3 /* Strideable.swift */; };
+		442BE75CB78929A80AEF551F94562726 /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3724142C17EBE7BDB812E849FA54E /* EncodableExtensions.swift */; };
+		473BE8A2C7D43099005EF7A2B9925204 /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E09311F190C1D593AB4F4FFD742269F /* Division.swift */; };
+		49FDFE1C289E086C6D29B6D035B4221B /* ResolverExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCD2A74A29EF56A25CB961B2050BDA /* ResolverExtensions.swift */; };
+		4E62725F16C6E562B845BD007550CA6F /* EosioTransactionPromises.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C054323B49C5184379F78304C4498B /* EosioTransactionPromises.swift */; };
+		53881D8F70EE444AD2416586BC93A966 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B6D22121F87850F475E7FE68C56A21 /* Foundation.framework */; };
+		5C2CB57871ECA3EBE7A7A6B2EBD38CE9 /* Deprecations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D878F76AFD6ED4B4D80A9E8CC0871A7 /* Deprecations.swift */; };
+		65D64394D9744CB07E3F816F31181D3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B6D22121F87850F475E7FE68C56A21 /* Foundation.framework */; };
+		6624D3B101391579CF8463C939B839BC /* EosioSerializationProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD8C7A9FB2985C6352E4844D3A7F748 /* EosioSerializationProviderProtocol.swift */; };
+		667111B91B70AC8C0F044328A6FBC3CD /* EosioAbiProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C31B8F497B3FD1381FCCBF8A93A4CE /* EosioAbiProviderProtocol.swift */; };
+		686A24FF04C5BCA4FD04F707B0AA492B /* EosioTransactionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73486F9DAD78F00D5868BD7D8B83B0BA /* EosioTransactionFactory.swift */; };
+		695836A3C7A2D11D297CA3ADAC0AE989 /* race.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F0E57169A489CC2F667664D792C7CF /* race.m */; };
+		6B62405389DC388C23F07A72F3F5859F /* firstly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A863BF88D3AA32470CCED6E5E7D512 /* firstly.swift */; };
+		6BBAA95023397C5B246816D7D7E30B09 /* fwd.h in Headers */ = {isa = PBXBuildFile; fileRef = 73024F92FB09C05A1B3D53F9402D37DB /* fwd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D18E06E4EE2428564AF36F437285DA0 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486B28508B40CBC9D0406D7BDFE28D54 /* GCD.swift */; };
+		6E2E49FE15981A36E97B99F604F75E02 /* RIPEMD160.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA28DB4A1AFCAE8D72B51D5B46769AB /* RIPEMD160.swift */; };
+		708FEA86951AEEE9045D987CAA73FCCC /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F0EDF4C331A023F082EB40C77B4F66 /* Random.swift */; };
+		716028E45EA5D94A93B0F0775E11B50E /* UIView+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1233D4C9FFA3C589B747425D6382B /* UIView+Promise.swift */; };
+		74EE18D86F06644C46DE6AB16E99E107 /* Catchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D075EF859DEBBF1C3B69D9F5AF112CA /* Catchable.swift */; };
+		7841AECD681808632A9526F9BEAA34DD /* UIViewPropertyAnimator+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B839EF61FB1903D09305332899DB8F1 /* UIViewPropertyAnimator+Promise.swift */; };
+		7A343FE7F56C3A4C4DFEC7C9B05A7522 /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 66EBF6B336EC9318170E8C4948C3C0C0 /* AnyPromise.m */; };
+		7ACD13CF7B694D37BB3AF04950AF6CAA /* NSNotificationCenter+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD128775A1F1610EFC67CAC0BC4C8FE /* NSNotificationCenter+Promise.swift */; };
+		7B02A9E1CCF59B0D0CD2FC38CF20ACFB /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8104802618366A3C2F5E01AECD15490 /* DataExtensions.swift */; };
+		7BCB5CC3BF43B172D005B5480AC16AD8 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4714C19E1E43CCBE12BB2ABD188293 /* Configuration.swift */; };
+		7F6EA4E17DFF8F8B6EC732192043D8EF /* race.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BA3C29DFC1116B5D378D55F989C7F0 /* race.swift */; };
+		8090D8DBC59D7179F27CFC6FCEB7EE4B /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EC6C233E861488D615A623DF9CD382 /* Comparable.swift */; };
+		8228878EE258C2CC8B685F67F6741971 /* NSURLSession+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CDAFE959B5F7C452FDD53CF8324BB1 /* NSURLSession+Promise.swift */; };
+		82565A1FD5D41580133C1F60D73032A4 /* dispatch_promise.m in Sources */ = {isa = PBXBuildFile; fileRef = 4989B463A89B4638B01327C8F4EB6D6D /* dispatch_promise.m */; };
+		82CABAEE4BBD0AD2FFC999B0EB1BEF80 /* NSNotificationCenter+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C2FDD89A31300FF5E7554FB5A5AE9B /* NSNotificationCenter+AnyPromise.m */; };
+		84C65DF7AC0BFB3BC05A5B5416DDE425 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956F15649B8A5B88914BF8858845E1B3 /* LinkedList.swift */; };
+		874D54168AA9F7605CB8926E25D2F64F /* UIView+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B8B2BFFD7A5B59B11E424BC0D0EF60 /* UIView+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AA7B7CF791CD173EC0E40E2A34F3858 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B6D22121F87850F475E7FE68C56A21 /* Foundation.framework */; };
+		8BCA955685EE52160B88FD8738A8D71E /* NSTask+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D04967B1D9B1A4A98BC7337A83B5E7D /* NSTask+AnyPromise.m */; };
+		8D1E529B19AD725E577093A5A4376752 /* when.m in Sources */ = {isa = PBXBuildFile; fileRef = 580800616375621E1F2D71E6310F29CF /* when.m */; };
+		90608F940486B06CE9B9C8EDC4C4447F /* UIViewController+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBFBF5177E78AB4B85AE1BA083AA33 /* UIViewController+AnyPromise.m */; };
+		95703DFC1B5B4E735BD6BFBB04975457 /* AllResponseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E54FB40BCC7EFE4EBC95782CF877440 /* AllResponseProtocols.swift */; };
+		96CB625CB22B40DDA674061FB0224BED /* Guarantee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2550E2330939EF15537C3216B13EFBC5 /* Guarantee.swift */; };
+		9C462DDD528A63484E0B04A3574C098D /* RandomUInt64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D393F0C395AB711C16DDBC282011B26 /* RandomUInt64.swift */; };
+		9F2C7754D4FB2E11648B67DAC4C1F4AE /* RequestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C4FF6F8D54A85FF4A1A6A76EB1BE1 /* RequestModels.swift */; };
+		A233408D53C499FB61AA16736399A28A /* NSNotificationCenter+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = B2888E3421BA9F6D9F0F4783C8138F56 /* NSNotificationCenter+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2E8BE3337E53F75681D679E4C152284 /* Thenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE90F4026BBFBE8BC1BA5D79ACFA71 /* Thenable.swift */; };
+		A2F750790753C8F86DBE7389643F997F /* NSURLSession+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A242B9753ADBD3CCD922A25C5081BA /* NSURLSession+AnyPromise.m */; };
+		A3EF24FA9BE07110EF0F3CDD290BB609 /* NSObject+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7646A81D7E0FFBF8FFD202D815111D05 /* NSObject+Promise.swift */; };
+		A446BC4ABB45C2C72E3838EBDF254933 /* UIViewController+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BF186A402B924CC6A5B9243AD9ED101 /* UIViewController+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A57B812658B963E3A4A36FDF7D0F8CEB /* Base58String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CE244CE7F678BFDEE588941A5E2201 /* Base58String.swift */; };
+		A5E453B96D5011E96A97EC214735F35B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B6D22121F87850F475E7FE68C56A21 /* Foundation.framework */; };
+		A7AEB1697CE450BCDA3DE6613A221EAA /* Multiplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5BAF5F13B8F95525FDD567C27E1D5 /* Multiplication.swift */; };
+		A845E33868585804317382FE7687AD40 /* Process+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE91678C87C8B4AA545BE7AA0AB12474 /* Process+Promise.swift */; };
+		A8CBEF4122547F83FB22CA5EB47DB376 /* Prime Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B736509578AC8732B1A08F681A560A6 /* Prime Test.swift */; };
+		AB917910338AA95704114BD816F64912 /* Pods-EOSBlockSampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 721BBB2033C7A658B5DD9593F7C58A1E /* Pods-EOSBlockSampleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE8BA6528C09FADE43F9AD0A1EB05485 /* BigInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B61071FF003DFEA724A8C5607B3DCD /* BigInt.swift */; };
+		AF8BA7384F08DA36D22F4897EA33AEBF /* UIView+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAB514D8DB3CCC67DCA17629ECCA409 /* UIView+AnyPromise.m */; };
+		B0AF690FBC44D61FDC8A7D8B60C3BA21 /* CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6C927425CBB6C622EADEF0E7E33460 /* CustomStringConvertible.swift */; };
+		B45CCFEF82EFD6364E76F325ACA86188 /* SipHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B491AA7F2E4EAFD8954C23DA0C1E5A /* SipHashable.swift */; };
+		B4613D7EF7F95F2BD0DF9574A43C13AB /* when.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA512A6C1B63A89F89D710ECD3C6D55 /* when.swift */; };
+		B7A477214C55718A3FF881D14F52B7F3 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED70FE441A74BFABF6338ECD6842153 /* Promise.swift */; };
+		BA08280357F44BD7D3F599716B448779 /* EosioError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5C726F046DB6313539A85349DC76B /* EosioError.swift */; };
+		BA914D916BF9D06044044171207882AE /* after.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1D5FA9AE91C06D715E5D0901924299 /* after.m */; };
+		BB64503E367FB9EFE7E524B335D72504 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0B55669A4030C8F0AE9F41ED237750 /* UIKit.framework */; };
+		BBA5159D4462782CE72E503183C40342 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B6D22121F87850F475E7FE68C56A21 /* Foundation.framework */; };
+		BBCD82BD21F15F62247F27434A670979 /* SipHash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 471FE917CD3BBA9837A74E2C8EE3B3B9 /* SipHash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBD218B07F0E809D378CA85E1FCADCCB /* Pods-EOSBlockSampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB017B91EA186130D293BD6D0C09AB3D /* Pods-EOSBlockSampleTests-dummy.m */; };
+		BBE28663A24C24F07398FDEC6AA05093 /* Bitwise Ops.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09F54237AFDE24FF28A4AA4F615B884 /* Bitwise Ops.swift */; };
+		BD344D2291D320567192D2FE54A72262 /* AnyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3F3A3D2901D46DEC0970154C77B5C /* AnyPromise.swift */; };
+		BEBFEAA681041605033AF64235BB0C7A /* Data Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88962EE2AF2742CA18466C557B49C946 /* Data Conversion.swift */; };
+		C599EFA749034425555F7AF462EB22DD /* EosioSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1DECA65660A6D59A2353C185E42155 /* EosioSwift-dummy.m */; };
+		C5B37CBA40F1D92DE36E99DD7ABAA04E /* EosioRpcProviderEndpointsCallbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220C995071E3D16492AC5B17E8A140CA /* EosioRpcProviderEndpointsCallbacks.swift */; };
+		C6EF95DBB09BF975D9DC84DC83B21B0C /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC034FAD89776017AB5A2EB5D453CDD /* Addition.swift */; };
+		C6F7DF0E4426ADBD2F17843C17F4746D /* EosioKeySignatureExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E3D473887DA20F62B4D4B5119A9BCC /* EosioKeySignatureExtensions.swift */; };
+		C9E5D4104CDC4C0422D739A2072B2F56 /* Pods-EOSBlockSampleUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E874A86D2A9DB3BE27E85A0D30E665C /* Pods-EOSBlockSampleUITests-dummy.m */; };
+		C9EA1219A95AE6DE2FCF4500BC63EC18 /* EosioSignatureProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0181808A0EE958B993B8AAAAFE98E4E6 /* EosioSignatureProviderProtocol.swift */; };
+		CA39C4AB3BDD89D446F953A7FB7452E8 /* hang.m in Sources */ = {isa = PBXBuildFile; fileRef = 053DFB90963FA3BFBAB13D5D66F5738E /* hang.m */; };
+		CC4E5A01192E394B4E747F827E183E05 /* Pods-EOSBlockSampleUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FBA846F1FADADB16C096BB2A1C806219 /* Pods-EOSBlockSampleUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE4569B73F9C2A0A434436635558FD59 /* ZAssert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62D58A2D368416FBC6E5F18BE54CDE7 /* ZAssert.swift */; };
+		CEE84F22083E82E5D716207956993CB0 /* EosioRpcProviderEndpointsForProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4104DA307ED571187F4FE80E8AB24 /* EosioRpcProviderEndpointsForProtocol.swift */; };
+		D3AA870EB37B685921077AC4A6BE073D /* Pods-EOSBlockSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F7BD532A674976E8D3BDFE2A8F51DA /* Pods-EOSBlockSample-dummy.m */; };
+		D3AFCDBC8B1F698935AEF5BB57ADAD91 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4438AF70AAF3ABEBD4D9DA26C91B9153 /* DateExtensions.swift */; };
+		D65A628109B6FC5C2772744C9D4E0DFB /* EosioRpcProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01571EADA7F3F7E2A87F26F28437A5B5 /* EosioRpcProvider.swift */; };
+		D6B864CBB3329B3ACA22C662F2C8FFA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B6D22121F87850F475E7FE68C56A21 /* Foundation.framework */; };
+		D73167B08F4538D788D1CB7D08AAEA77 /* PMKUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E537EAEA669F9BFA02AC3E470CC279A6 /* PMKUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D821DFC45A985BE2DFAE61E8875ADC25 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B991182475BE5EA4B050D55A7ABF21B /* PromiseKit.framework */; };
+		D834B0FEA95FF2052FE986CF3EBDDAF3 /* RpcProviderResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B926AF9749EA0FA90E23087F153F535E /* RpcProviderResponseModels.swift */; };
+		D910CFB64DF7CE6A034FD6351A265534 /* RpcProviderRequestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BAE9F85B93B87ED99EB697BDD8060E /* RpcProviderRequestModels.swift */; };
+		DA46227F4BE1C9CD1FECC43DE187C2F6 /* PromiseKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EAFD712D8D54786CE99E2D4EA9F0458 /* PromiseKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD8A2089392EBA3DDFBDD84E3074C12B /* after.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0873BF31FE78D6A156FF7AF3F2D52DB8 /* after.swift */; };
+		E718475146DB682A0816804A4B43495E /* Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A517821A60BA8046FB03AAFA9A304C7 /* Subtraction.swift */; };
+		E78604E252BF91A2D5DCAD8A9F811878 /* EosioRpcProviderEndpointsPromises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3261D160628AEF4E85BDEA12DC59F683 /* EosioRpcProviderEndpointsPromises.swift */; };
+		EB08319C956C57100150C3B78A7A4AF8 /* EosioTransactionAbis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EFC924A99FBB000F4E910B1F9C425 /* EosioTransactionAbis.swift */; };
+		EBAD8930E547B0137D959FA5780D5ABB /* NSURLSession+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = CF0B6F92B1AAEE50B3E371B807E58522 /* NSURLSession+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEB2D3E04E23863E973EBA805CBFB469 /* EosioTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AFE7BCB567BE69FE4A8A5607142DD1 /* EosioTransaction.swift */; };
+		F236B585E6771005D58C66F736353254 /* Pods-EOSBlockSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37280EDBBB462359F2850C59A1A8B4DD /* Pods-EOSBlockSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F24DF6E2144ED5183A332E13018BE7CE /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85778A1102233DB3FC6E62CD8FB7B3F /* ArrayExtensions.swift */; };
+		F3BA8CCBED080C60B9C5F23A930CBC68 /* EosioSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DD3E83C5E2C6862E201083DDC8EBE17 /* EosioSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4A4F6C599D996DC7FC7524EF12A1562 /* BigInt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FE814EA0AA2C1865E718B3365955320 /* BigInt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5C3BB6C61A28391A95D2423471D6C8E /* Exponentiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F906AD01CC327BFA1FA41B63EF594D5 /* Exponentiation.swift */; };
+		F61B3930087A07804A050828B5E5844A /* String Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8EE644A956FA767C1111F0A1BBF078 /* String Conversion.swift */; };
+		F686491057470AF722C4C64D0618CF24 /* Primitive Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FD1D8A39B5EF6E5CA14A2A3C67EE04 /* Primitive Types.swift */; };
+		F6A0D47D18D52912F3E0B6F604D87864 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B6D22121F87850F475E7FE68C56A21 /* Foundation.framework */; };
+		F7D418E0BDDDAE7676DB91D37DE1E9E5 /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DB087D696A225A727BDECB62F83D4B /* BigInt.framework */; };
+		F7E11CB0002E5E033EF0FDD930369004 /* Floating Point Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9ABC8A2FC857F78C93D6CEE173382 /* Floating Point Conversion.swift */; };
+		FC2F67809A55823F013E536EF56317A7 /* Square Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229ACFACA6D9DBB7B499B9FD09392D25 /* Square Root.swift */; };
+		FDCB75406CA8A7B647C6C867139BD210 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60A49DC507A57511618C7035BA4900 /* Codable.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07291E4A02176C1F60FB77BA3969A216 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09DD83B7D075842A3A5105AD410BD38A;
+			remoteInfo = BigInt;
+		};
+		093F86903684D49DE240D0DE94A2FD52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09DD83B7D075842A3A5105AD410BD38A;
+			remoteInfo = BigInt;
+		};
+		14844E4C5A9BBC3C3F4C54C3DC1355AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C579CE66A1E7A9AA33CA5F97F9C22C5;
+			remoteInfo = PromiseKit;
+		};
+		23D3AA9708B45355F9355E2B71F74F8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48DD11FE3425410A409E55A889EACD4E;
+			remoteInfo = EosioSwift;
+		};
+		2C0D33FA038FFEE0EB2C146368C7D0BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 377DAE4050D766B30C3A484B8525BB35;
+			remoteInfo = SipHash;
+		};
+		2D2B05E4F808F0704B917806151C347A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C579CE66A1E7A9AA33CA5F97F9C22C5;
+			remoteInfo = PromiseKit;
+		};
+		54AFE977F9C16DB42CCDB525692406FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 377DAE4050D766B30C3A484B8525BB35;
+			remoteInfo = SipHash;
+		};
+		5C1F831495FCCA4E87C92D9A505DF56F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 377DAE4050D766B30C3A484B8525BB35;
+			remoteInfo = SipHash;
+		};
+		6741475C49FCFB2BBF7958827A1C61A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 377DAE4050D766B30C3A484B8525BB35;
+			remoteInfo = SipHash;
+		};
+		7CF9877D008A0BDD3A64338E2B7B90A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C579CE66A1E7A9AA33CA5F97F9C22C5;
+			remoteInfo = PromiseKit;
+		};
+		8A04DCD3DB4345154C7E18E91F3AE7E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48DD11FE3425410A409E55A889EACD4E;
+			remoteInfo = EosioSwift;
+		};
+		AB703F839BE10C97D66143A25F122A47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09DD83B7D075842A3A5105AD410BD38A;
+			remoteInfo = BigInt;
+		};
+		B01904CB0EFE9FF17D12ED33BEDD7145 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09DD83B7D075842A3A5105AD410BD38A;
+			remoteInfo = BigInt;
+		};
+		CFDCDD4C02E66174499A2708C3A268E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C579CE66A1E7A9AA33CA5F97F9C22C5;
+			remoteInfo = PromiseKit;
+		};
+		E370859AFF2B285C207DC61EE516CBFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48DD11FE3425410A409E55A889EACD4E;
+			remoteInfo = EosioSwift;
+		};
+		E6BB57647F5A43D07AD0814B0763D1BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C2933D831299EAE93A4B903D7713D51;
+			remoteInfo = "Pods-EOSBlockSample";
+		};
+		EAB1192DF8C60D4E7037888206E0214B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C2933D831299EAE93A4B903D7713D51;
+			remoteInfo = "Pods-EOSBlockSample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		002B1E88BA14EBF633CD66EBFBA107E9 /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PromiseKit.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		010E682734B1A8A25602D3DA72742574 /* Hashable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Hashable.swift; path = sources/Hashable.swift; sourceTree = "<group>"; };
+		01571EADA7F3F7E2A87F26F28437A5B5 /* EosioRpcProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioRpcProvider.swift; path = EosioSwift/EosioRpcProvider/EosioRpcProvider.swift; sourceTree = "<group>"; };
+		0181808A0EE958B993B8AAAAFE98E4E6 /* EosioSignatureProviderProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioSignatureProviderProtocol.swift; path = EosioSwift/EosioSignatureProviderProtocol/EosioSignatureProviderProtocol.swift; sourceTree = "<group>"; };
+		043815A3BD91B2E21FCBB9E7235ACF1E /* NSTask+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTask+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.h"; sourceTree = "<group>"; };
+		04DD6F1D1F17A55B50D06753C1C446AB /* EosioName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioName.swift; path = EosioSwift/Foundation/EosioName.swift; sourceTree = "<group>"; };
+		053DFB90963FA3BFBAB13D5D66F5738E /* hang.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = hang.m; path = Sources/hang.m; sourceTree = "<group>"; };
+		05A1233D4C9FFA3C589B747425D6382B /* UIView+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Promise.swift"; path = "Extensions/UIKit/Sources/UIView+Promise.swift"; sourceTree = "<group>"; };
+		07A863BF88D3AA32470CCED6E5E7D512 /* firstly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = firstly.swift; path = Sources/firstly.swift; sourceTree = "<group>"; };
+		07FA5AC6AD59F96AE5BEE264977EDC9D /* Pods_EOSBlockSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EOSBlockSample.framework; path = "Pods-EOSBlockSample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0873BF31FE78D6A156FF7AF3F2D52DB8 /* after.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = after.swift; path = Sources/after.swift; sourceTree = "<group>"; };
+		0A346085738C10BAA430825A9820B65B /* Pods-EOSBlockSampleUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EOSBlockSampleUITests.modulemap"; sourceTree = "<group>"; };
+		0B839EF61FB1903D09305332899DB8F1 /* UIViewPropertyAnimator+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewPropertyAnimator+Promise.swift"; path = "Extensions/UIKit/Sources/UIViewPropertyAnimator+Promise.swift"; sourceTree = "<group>"; };
+		0C941E7A02FF7225F662365A2196259D /* Pods-EOSBlockSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EOSBlockSample-frameworks.sh"; sourceTree = "<group>"; };
+		0CFCCB523FE475C0E8533AA0FB778773 /* afterlife.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = afterlife.swift; path = Extensions/Foundation/Sources/afterlife.swift; sourceTree = "<group>"; };
+		0DA90B85788C63E687A5C7D1F2E0DF36 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/Error.swift; sourceTree = "<group>"; };
+		144773363482C9223FC66CC73A240641 /* SipHash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SipHash.xcconfig; sourceTree = "<group>"; };
+		16B7352C52D0AEC4C7607940C2C8A0BB /* PromiseKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PromiseKit.modulemap; sourceTree = "<group>"; };
+		19AD887CBB99A2659170A6EF71B66DA9 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
+		1AE97B4DDB086865E5C2D99B5757A274 /* DictionaryExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryExtensions.swift; path = EosioSwift/Extensions/DictionaryExtensions.swift; sourceTree = "<group>"; };
+		1BF186A402B924CC6A5B9243AD9ED101 /* UIViewController+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AnyPromise.h"; path = "Extensions/UIKit/Sources/UIViewController+AnyPromise.h"; sourceTree = "<group>"; };
+		1C6C4FF6F8D54A85FF4A1A6A76EB1BE1 /* RequestModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModels.swift; path = EosioSwift/EosioRpcProviderProtocol/RequestModels/RequestModels.swift; sourceTree = "<group>"; };
+		1D878F76AFD6ED4B4D80A9E8CC0871A7 /* Deprecations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.swift; path = Sources/Deprecations.swift; sourceTree = "<group>"; };
+		1ED70FE441A74BFABF6338ECD6842153 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Sources/Promise.swift; sourceTree = "<group>"; };
+		220C995071E3D16492AC5B17E8A140CA /* EosioRpcProviderEndpointsCallbacks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioRpcProviderEndpointsCallbacks.swift; path = EosioSwift/EosioRpcProvider/Endpoints/EosioRpcProviderEndpointsCallbacks.swift; sourceTree = "<group>"; };
+		2234986C4AA2AF1AD8B0DB8BA2798DD0 /* EosioSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EosioSwift.xcconfig; sourceTree = "<group>"; };
+		229ACFACA6D9DBB7B499B9FD09392D25 /* Square Root.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Square Root.swift"; path = "sources/Square Root.swift"; sourceTree = "<group>"; };
+		2378C1979920707BDFA9C48C1D8469FF /* SipHash-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SipHash-prefix.pch"; sourceTree = "<group>"; };
+		2550E2330939EF15537C3216B13EFBC5 /* Guarantee.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Guarantee.swift; path = Sources/Guarantee.swift; sourceTree = "<group>"; };
+		265541E0970AB9F8F2A5A313383388D3 /* Strideable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Strideable.swift; path = sources/Strideable.swift; sourceTree = "<group>"; };
+		26B61071FF003DFEA724A8C5607B3DCD /* BigInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BigInt.swift; path = sources/BigInt.swift; sourceTree = "<group>"; };
+		27E3F3A3D2901D46DEC0970154C77B5C /* AnyPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyPromise.swift; path = Sources/AnyPromise.swift; sourceTree = "<group>"; };
+		299EFC924A99FBB000F4E910B1F9C425 /* EosioTransactionAbis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioTransactionAbis.swift; path = EosioSwift/EosioTransaction/EosioTransactionAbis.swift; sourceTree = "<group>"; };
+		2B736509578AC8732B1A08F681A560A6 /* Prime Test.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Prime Test.swift"; path = "sources/Prime Test.swift"; sourceTree = "<group>"; };
+		2D04967B1D9B1A4A98BC7337A83B5E7D /* NSTask+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTask+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.m"; sourceTree = "<group>"; };
+		2D6C927425CBB6C622EADEF0E7E33460 /* CustomStringConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomStringConvertible.swift; path = Sources/CustomStringConvertible.swift; sourceTree = "<group>"; };
+		30B6D22121F87850F475E7FE68C56A21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3261D160628AEF4E85BDEA12DC59F683 /* EosioRpcProviderEndpointsPromises.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioRpcProviderEndpointsPromises.swift; path = EosioSwift/EosioRpcProvider/Endpoints/EosioRpcProviderEndpointsPromises.swift; sourceTree = "<group>"; };
+		34D19AE0546102EE7DF8B782CF06932E /* Pods-EOSBlockSample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EOSBlockSample-Info.plist"; sourceTree = "<group>"; };
+		34FAB30C5C824ABFACFF64179A8D7103 /* BigInt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BigInt-dummy.m"; sourceTree = "<group>"; };
+		37280EDBBB462359F2850C59A1A8B4DD /* Pods-EOSBlockSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EOSBlockSample-umbrella.h"; sourceTree = "<group>"; };
+		38CE244CE7F678BFDEE588941A5E2201 /* Base58String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base58String.swift; path = EosioSwift/Crypto/Base58String.swift; sourceTree = "<group>"; };
+		3A517821A60BA8046FB03AAFA9A304C7 /* Subtraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subtraction.swift; path = sources/Subtraction.swift; sourceTree = "<group>"; };
+		3BBDC90E5F6AE0679CE349339C3D4338 /* Pods-EOSBlockSampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EOSBlockSampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		41BAE9F85B93B87ED99EB697BDD8060E /* RpcProviderRequestModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RpcProviderRequestModels.swift; path = EosioSwift/EosioRpcProvider/Models/RpcProviderRequestModels.swift; sourceTree = "<group>"; };
+		428C0CB398CEFE976792C7BC7BFCD394 /* Pods-EOSBlockSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EOSBlockSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4438AF70AAF3ABEBD4D9DA26C91B9153 /* DateExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateExtensions.swift; path = EosioSwift/Extensions/DateExtensions.swift; sourceTree = "<group>"; };
+		45EC6472DA5772512B334E8EA26A236C /* Pods-EOSBlockSampleUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EOSBlockSampleUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		471FE917CD3BBA9837A74E2C8EE3B3B9 /* SipHash-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SipHash-umbrella.h"; sourceTree = "<group>"; };
+		482BC3A2862136E1214307B2FBC517DC /* DynamicKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicKey.swift; path = EosioSwift/Foundation/DynamicKey.swift; sourceTree = "<group>"; };
+		486B28508B40CBC9D0406D7BDFE28D54 /* GCD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCD.swift; path = sources/GCD.swift; sourceTree = "<group>"; };
+		4989B463A89B4638B01327C8F4EB6D6D /* dispatch_promise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = dispatch_promise.m; path = Sources/dispatch_promise.m; sourceTree = "<group>"; };
+		49C2475472EB1162C97172A3E5E48BEB /* Pods-EOSBlockSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EOSBlockSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4A455080EA6A290EA7045C01476B3D0F /* Pods-EOSBlockSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EOSBlockSample.debug.xcconfig"; sourceTree = "<group>"; };
+		4CD16668B90B8440BDCE075B7EEA000D /* EosioRpcProviderProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioRpcProviderProtocol.swift; path = EosioSwift/EosioRpcProviderProtocol/EosioRpcProviderProtocol.swift; sourceTree = "<group>"; };
+		4FD5BAF5F13B8F95525FDD567C27E1D5 /* Multiplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Multiplication.swift; path = sources/Multiplication.swift; sourceTree = "<group>"; };
+		5071DA24522CA38029A51E34CE0C6C6D /* PMKFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKFoundation.h; path = Extensions/Foundation/Sources/PMKFoundation.h; sourceTree = "<group>"; };
+		53E9ABC8A2FC857F78C93D6CEE173382 /* Floating Point Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Floating Point Conversion.swift"; path = "sources/Floating Point Conversion.swift"; sourceTree = "<group>"; };
+		53EC6C233E861488D615A623DF9CD382 /* Comparable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Comparable.swift; path = sources/Comparable.swift; sourceTree = "<group>"; };
+		580800616375621E1F2D71E6310F29CF /* when.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = when.m; path = Sources/when.m; sourceTree = "<group>"; };
+		5B991182475BE5EA4B050D55A7ABF21B /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1DECA65660A6D59A2353C185E42155 /* EosioSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EosioSwift-dummy.m"; sourceTree = "<group>"; };
+		5EF67752A5B021B59C1575032B325090 /* EosioSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EosioSwift.modulemap; sourceTree = "<group>"; };
+		5FE814EA0AA2C1865E718B3365955320 /* BigInt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BigInt-umbrella.h"; sourceTree = "<group>"; };
+		61C7008726503C50CF0346643E2B4FE2 /* BigInt-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BigInt-prefix.pch"; sourceTree = "<group>"; };
+		62EABB67D211F34DAFCBB49E8EC69C72 /* Shifts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shifts.swift; path = sources/Shifts.swift; sourceTree = "<group>"; };
+		65B8B2BFFD7A5B59B11E424BC0D0EF60 /* UIView+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+AnyPromise.h"; path = "Extensions/UIKit/Sources/UIView+AnyPromise.h"; sourceTree = "<group>"; };
+		65F7BD532A674976E8D3BDFE2A8F51DA /* Pods-EOSBlockSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EOSBlockSample-dummy.m"; sourceTree = "<group>"; };
+		66EBF6B336EC9318170E8C4948C3C0C0 /* AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AnyPromise.m; path = Sources/AnyPromise.m; sourceTree = "<group>"; };
+		670DABC1C1D0F59003E7DAA987920FD0 /* Pods_EOSBlockSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EOSBlockSampleTests.framework; path = "Pods-EOSBlockSampleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC87A45B5B17BB7604EFF932AA87971 /* PromiseKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PromiseKit.h; path = Sources/PromiseKit.h; sourceTree = "<group>"; };
+		6C73788D6EB57A67734F14F71B87B553 /* EosioSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EosioSwift-Info.plist"; sourceTree = "<group>"; };
+		6EAFD712D8D54786CE99E2D4EA9F0458 /* PromiseKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-umbrella.h"; sourceTree = "<group>"; };
+		721BBB2033C7A658B5DD9593F7C58A1E /* Pods-EOSBlockSampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EOSBlockSampleTests-umbrella.h"; sourceTree = "<group>"; };
+		72F0E57169A489CC2F667664D792C7CF /* race.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = race.m; path = Sources/race.m; sourceTree = "<group>"; };
+		73024F92FB09C05A1B3D53F9402D37DB /* fwd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fwd.h; path = Sources/fwd.h; sourceTree = "<group>"; };
+		73486F9DAD78F00D5868BD7D8B83B0BA /* EosioTransactionFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioTransactionFactory.swift; path = EosioSwift/EosioTransaction/EosioTransactionFactory.swift; sourceTree = "<group>"; };
+		75988CE36994E2742274556B6244536B /* Pods-EOSBlockSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EOSBlockSample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		75E387AD78152538163B80FEB16B9EBB /* Pods-EOSBlockSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EOSBlockSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7646A81D7E0FFBF8FFD202D815111D05 /* NSObject+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Promise.swift"; path = "Extensions/Foundation/Sources/NSObject+Promise.swift"; sourceTree = "<group>"; };
+		76F66464CAC83B6500514B0D3C1A0E43 /* EosioSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EosioSwift-prefix.pch"; sourceTree = "<group>"; };
+		77BE300BF4849B6ACC73AEE8A2B03942 /* PromiseKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PromiseKit-Info.plist"; sourceTree = "<group>"; };
+		7933AFF7FB2D29DA3C2937944A6AAF08 /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = EosioSwift/Extensions/StringExtensions.swift; sourceTree = "<group>"; };
+		7A3FE15645832961FD90324C7655D7F1 /* SipHash-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SipHash-Info.plist"; sourceTree = "<group>"; };
+		7BA28DB4A1AFCAE8D72B51D5B46769AB /* RIPEMD160.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RIPEMD160.swift; path = EosioSwift/Crypto/RIPEMD160.swift; sourceTree = "<group>"; };
+		7CAB514D8DB3CCC67DCA17629ECCA409 /* UIView+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+AnyPromise.m"; path = "Extensions/UIKit/Sources/UIView+AnyPromise.m"; sourceTree = "<group>"; };
+		7DD3E83C5E2C6862E201083DDC8EBE17 /* EosioSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EosioSwift-umbrella.h"; sourceTree = "<group>"; };
+		7EC62C1327765D57AE5887F15268B9B0 /* Pods-EOSBlockSampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EOSBlockSampleTests.modulemap"; sourceTree = "<group>"; };
+		83E5C726F046DB6313539A85349DC76B /* EosioError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioError.swift; path = EosioSwift/Foundation/EosioError.swift; sourceTree = "<group>"; };
+		85FD1D8A39B5EF6E5CA14A2A3C67EE04 /* Primitive Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Primitive Types.swift"; path = "SipHash/Primitive Types.swift"; sourceTree = "<group>"; };
+		8700095FB96C8A4354B329868A0092CA /* Words and Bits.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Words and Bits.swift"; path = "sources/Words and Bits.swift"; sourceTree = "<group>"; };
+		88962EE2AF2742CA18466C557B49C946 /* Data Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data Conversion.swift"; path = "sources/Data Conversion.swift"; sourceTree = "<group>"; };
+		894ED2600DD2757B723F8EABDAA30C83 /* EosioTransactionAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioTransactionAction.swift; path = EosioSwift/EosioTransaction/EosioTransactionAction.swift; sourceTree = "<group>"; };
+		8A74E19AAF88D44108C4F77E95855D2D /* Pods-EOSBlockSampleUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EOSBlockSampleUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8CAB79E84494D933E756C9BE328DFD18 /* Pods-EOSBlockSampleUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EOSBlockSampleUITests-frameworks.sh"; sourceTree = "<group>"; };
+		8D393F0C395AB711C16DDBC282011B26 /* RandomUInt64.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomUInt64.swift; path = SipHash/RandomUInt64.swift; sourceTree = "<group>"; };
+		8D4E8535187C3617FA1F486D73554B22 /* SipHasher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipHasher.swift; path = SipHash/SipHasher.swift; sourceTree = "<group>"; };
+		8DBBFBF5177E78AB4B85AE1BA083AA33 /* UIViewController+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AnyPromise.m"; path = "Extensions/UIKit/Sources/UIViewController+AnyPromise.m"; sourceTree = "<group>"; };
+		8DE4104DA307ED571187F4FE80E8AB24 /* EosioRpcProviderEndpointsForProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioRpcProviderEndpointsForProtocol.swift; path = EosioSwift/EosioRpcProvider/Endpoints/EosioRpcProviderEndpointsForProtocol.swift; sourceTree = "<group>"; };
+		90C190BB072F423C615C9C490204B84A /* PromiseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-prefix.pch"; sourceTree = "<group>"; };
+		90CDAFE959B5F7C452FDD53CF8324BB1 /* NSURLSession+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLSession+Promise.swift"; path = "Extensions/Foundation/Sources/NSURLSession+Promise.swift"; sourceTree = "<group>"; };
+		91BB24BA472AF523E913108C9AA301F2 /* BigInt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BigInt.framework; path = BigInt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92AFE7BCB567BE69FE4A8A5607142DD1 /* EosioTransaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioTransaction.swift; path = EosioSwift/EosioTransaction/EosioTransaction.swift; sourceTree = "<group>"; };
+		933C7C0969D5EADCE80AF8FED66F63BE /* Pods-EOSBlockSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EOSBlockSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		936F7D6A5E573964F71409D62826A8BB /* EosioSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EosioSwift.framework; path = EosioSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93C975F15DB7E646DD373F3B1D142313 /* BigInt-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BigInt-Info.plist"; sourceTree = "<group>"; };
+		94393F7C861CB3AA7B576698106367EE /* Queue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = EosioSwift/Foundation/Queue.swift; sourceTree = "<group>"; };
+		956F15649B8A5B88914BF8858845E1B3 /* LinkedList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinkedList.swift; path = EosioSwift/Foundation/LinkedList.swift; sourceTree = "<group>"; };
+		97FD94EDEB1F387DE91433B0E0C6C813 /* Resolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resolver.swift; path = Sources/Resolver.swift; sourceTree = "<group>"; };
+		999D8ECC5B457542DCF23F44FDA37D7B /* Pods-EOSBlockSampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EOSBlockSampleTests-frameworks.sh"; sourceTree = "<group>"; };
+		99F0EDF4C331A023F082EB40C77B4F66 /* Random.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Random.swift; path = sources/Random.swift; sourceTree = "<group>"; };
+		9D075EF859DEBBF1C3B69D9F5AF112CA /* Catchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Catchable.swift; path = Sources/Catchable.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E09311F190C1D593AB4F4FFD742269F /* Division.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Division.swift; path = sources/Division.swift; sourceTree = "<group>"; };
+		9E54FB40BCC7EFE4EBC95782CF877440 /* AllResponseProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllResponseProtocols.swift; path = EosioSwift/EosioRpcProviderProtocol/RpcResponseProtocols/AllResponseProtocols.swift; sourceTree = "<group>"; };
+		9E874A86D2A9DB3BE27E85A0D30E665C /* Pods-EOSBlockSampleUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EOSBlockSampleUITests-dummy.m"; sourceTree = "<group>"; };
+		9F906AD01CC327BFA1FA41B63EF594D5 /* Exponentiation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Exponentiation.swift; path = sources/Exponentiation.swift; sourceTree = "<group>"; };
+		9FAE4304EFEA520208B8CAFB195767F6 /* Pods-EOSBlockSampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EOSBlockSampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A13E6323E817AF8429DE506B2A9BE274 /* EosioUInt64.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioUInt64.swift; path = EosioSwift/EosioRpcProvider/Models/EosioUInt64.swift; sourceTree = "<group>"; };
+		A2111396C1985EBD1171FE7B023FBE24 /* SipHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SipHash.framework; path = SipHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2ECFE1ED761350BC37D7B8D56913214 /* BigInt.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BigInt.xcconfig; sourceTree = "<group>"; };
+		A6B491AA7F2E4EAFD8954C23DA0C1E5A /* SipHashable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipHashable.swift; path = SipHash/SipHashable.swift; sourceTree = "<group>"; };
+		A7E37DB463F8167B23E9C0F8C11E462D /* Pods-EOSBlockSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EOSBlockSample-acknowledgements.plist"; sourceTree = "<group>"; };
+		A886C62CF28000A66BC810D5054E498E /* BigInt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BigInt.modulemap; sourceTree = "<group>"; };
+		AFA512A6C1B63A89F89D710ECD3C6D55 /* when.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = when.swift; path = Sources/when.swift; sourceTree = "<group>"; };
+		B2888E3421BA9F6D9F0F4783C8138F56 /* NSNotificationCenter+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.h"; sourceTree = "<group>"; };
+		B493DE2394A4E96F54C1BAE23C26936A /* Pods_EOSBlockSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EOSBlockSampleUITests.framework; path = "Pods-EOSBlockSampleUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6A242B9753ADBD3CCD922A25C5081BA /* NSURLSession+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSURLSession+AnyPromise.m"; sourceTree = "<group>"; };
+		B8104802618366A3C2F5E01AECD15490 /* DataExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataExtensions.swift; path = EosioSwift/Extensions/DataExtensions.swift; sourceTree = "<group>"; };
+		B926AF9749EA0FA90E23087F153F535E /* RpcProviderResponseModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RpcProviderResponseModels.swift; path = EosioSwift/EosioRpcProvider/Models/RpcProviderResponseModels.swift; sourceTree = "<group>"; };
+		BAC034FAD89776017AB5A2EB5D453CDD /* Addition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Addition.swift; path = sources/Addition.swift; sourceTree = "<group>"; };
+		BE91678C87C8B4AA545BE7AA0AB12474 /* Process+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Process+Promise.swift"; path = "Extensions/Foundation/Sources/Process+Promise.swift"; sourceTree = "<group>"; };
+		BF3116D1D9AD41FAF671D82F5F33E7A6 /* join.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = join.m; path = Sources/join.m; sourceTree = "<group>"; };
+		C0BA3C29DFC1116B5D378D55F989C7F0 /* race.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = race.swift; path = Sources/race.swift; sourceTree = "<group>"; };
+		C0C3724142C17EBE7BDB812E849FA54E /* EncodableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EncodableExtensions.swift; path = EosioSwift/Extensions/EncodableExtensions.swift; sourceTree = "<group>"; };
+		C3A42DB9128B5096E9D0C17051710BDE /* EosioResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioResult.swift; path = EosioSwift/Foundation/EosioResult.swift; sourceTree = "<group>"; };
+		C7C054323B49C5184379F78304C4498B /* EosioTransactionPromises.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioTransactionPromises.swift; path = EosioSwift/EosioTransaction/EosioTransactionPromises.swift; sourceTree = "<group>"; };
+		C89E57BEECB1F835F65AE8534EC0AEE1 /* PromiseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromiseKit-dummy.m"; sourceTree = "<group>"; };
+		C92BF3C178014E9A497128A832ED6303 /* Pods-EOSBlockSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EOSBlockSample.modulemap"; sourceTree = "<group>"; };
+		CAB4C9819767BB0BC8A7BF466EB3544F /* AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AnyPromise.h; path = Sources/AnyPromise.h; sourceTree = "<group>"; };
+		CB017B91EA186130D293BD6D0C09AB3D /* Pods-EOSBlockSampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EOSBlockSampleTests-dummy.m"; sourceTree = "<group>"; };
+		CCD8C7A9FB2985C6352E4844D3A7F748 /* EosioSerializationProviderProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioSerializationProviderProtocol.swift; path = EosioSwift/EosioSerializationProviderProtocol/EosioSerializationProviderProtocol.swift; sourceTree = "<group>"; };
+		CE2A5B26FC1443A739E71351CD4067E9 /* SipHash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SipHash.modulemap; sourceTree = "<group>"; };
+		CF0B6F92B1AAEE50B3E371B807E58522 /* NSURLSession+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSURLSession+AnyPromise.h"; sourceTree = "<group>"; };
+		D0D7B3DC95470F71FB61AB146B2B8975 /* hang.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = hang.swift; path = Sources/hang.swift; sourceTree = "<group>"; };
+		D2DB087D696A225A727BDECB62F83D4B /* BigInt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BigInt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5CC2C5B017849A72B0E33704DB2BD21 /* Pods-EOSBlockSampleTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EOSBlockSampleTests-Info.plist"; sourceTree = "<group>"; };
+		D62D58A2D368416FBC6E5F18BE54CDE7 /* ZAssert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZAssert.swift; path = EosioSwift/Foundation/ZAssert.swift; sourceTree = "<group>"; };
+		D631B5855DD79BDF8815B72F17FE3EC2 /* BigUInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BigUInt.swift; path = sources/BigUInt.swift; sourceTree = "<group>"; };
+		D85778A1102233DB3FC6E62CD8FB7B3F /* ArrayExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtensions.swift; path = EosioSwift/Extensions/ArrayExtensions.swift; sourceTree = "<group>"; };
+		DE0B55669A4030C8F0AE9F41ED237750 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DEDE90F4026BBFBE8BC1BA5D79ACFA71 /* Thenable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Thenable.swift; path = Sources/Thenable.swift; sourceTree = "<group>"; };
+		E05F67C86B8A9FEB4B2105AAE54BAEED /* LogEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogEvent.swift; path = Sources/LogEvent.swift; sourceTree = "<group>"; };
+		E0C2FDD89A31300FF5E7554FB5A5AE9B /* NSNotificationCenter+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.m"; sourceTree = "<group>"; };
+		E3C31B8F497B3FD1381FCCBF8A93A4CE /* EosioAbiProviderProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioAbiProviderProtocol.swift; path = EosioSwift/EosioAbiProviderProtocol/EosioAbiProviderProtocol.swift; sourceTree = "<group>"; };
+		E537EAEA669F9BFA02AC3E470CC279A6 /* PMKUIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKUIKit.h; path = Extensions/UIKit/Sources/PMKUIKit.h; sourceTree = "<group>"; };
+		E5B659BF6A5052886584743ED742B584 /* Pods-EOSBlockSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EOSBlockSample.release.xcconfig"; sourceTree = "<group>"; };
+		E62E6C50E2E254F9917B188E09E01573 /* SipHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SipHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6E3D473887DA20F62B4D4B5119A9BCC /* EosioKeySignatureExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioKeySignatureExtensions.swift; path = EosioSwift/Extensions/EosioKeySignatureExtensions.swift; sourceTree = "<group>"; };
+		E70622C3F74C8FE51A92B8DD7D68EDF8 /* PromiseKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromiseKit.xcconfig; sourceTree = "<group>"; };
+		EC8EE644A956FA767C1111F0A1BBF078 /* String Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String Conversion.swift"; path = "sources/String Conversion.swift"; sourceTree = "<group>"; };
+		F09F54237AFDE24FF28A4AA4F615B884 /* Bitwise Ops.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bitwise Ops.swift"; path = "sources/Bitwise Ops.swift"; sourceTree = "<group>"; };
+		F7EF0E2433554EFFEB34725B51FD177A /* Integer Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Integer Conversion.swift"; path = "sources/Integer Conversion.swift"; sourceTree = "<group>"; };
+		F80C93139BF2682BFD6D4681CACA7C08 /* EosioAbiProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EosioAbiProvider.swift; path = EosioSwift/EosioAbiProviderProtocol/EosioAbiProvider.swift; sourceTree = "<group>"; };
+		FA1D5FA9AE91C06D715E5D0901924299 /* after.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = after.m; path = Sources/after.m; sourceTree = "<group>"; };
+		FABCD2A74A29EF56A25CB961B2050BDA /* ResolverExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResolverExtensions.swift; path = EosioSwift/Extensions/ResolverExtensions.swift; sourceTree = "<group>"; };
+		FBA846F1FADADB16C096BB2A1C806219 /* Pods-EOSBlockSampleUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EOSBlockSampleUITests-umbrella.h"; sourceTree = "<group>"; };
+		FC4714C19E1E43CCBE12BB2ABD188293 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Sources/Configuration.swift; sourceTree = "<group>"; };
+		FC60A49DC507A57511618C7035BA4900 /* Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Codable.swift; path = sources/Codable.swift; sourceTree = "<group>"; };
+		FC993CB9CFBDA0D428DBB51955BE4F80 /* Pods-EOSBlockSampleUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EOSBlockSampleUITests-Info.plist"; sourceTree = "<group>"; };
+		FD3CB6636FBBE3C837E776D9EEDE06CC /* SipHash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SipHash-dummy.m"; sourceTree = "<group>"; };
+		FDD128775A1F1610EFC67CAC0BC4C8FE /* NSNotificationCenter+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNotificationCenter+Promise.swift"; path = "Extensions/Foundation/Sources/NSNotificationCenter+Promise.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0472676FC0F914C120937A1250319BBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7D418E0BDDDAE7676DB91D37DE1E9E5 /* BigInt.framework in Frameworks */,
+				F6A0D47D18D52912F3E0B6F604D87864 /* Foundation.framework in Frameworks */,
+				D821DFC45A985BE2DFAE61E8875ADC25 /* PromiseKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28C5204048540465A0D748221A4725A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA7B7CF791CD173EC0E40E2A34F3858 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32F0A877FF0B089603A8F98909654733 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBA5159D4462782CE72E503183C40342 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51F274DE137A7E13560F681F1303F04F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65D64394D9744CB07E3F816F31181D3F /* Foundation.framework in Frameworks */,
+				BB64503E367FB9EFE7E524B335D72504 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6E2E7EBB71D0DC1BAC6485C1CA30F71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53881D8F70EE444AD2416586BC93A966 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF1C77090CBF9C98227F259991D7A102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6B864CBB3329B3ACA22C662F2C8FFA3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB77212EECD890F9965661551AE7408F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E453B96D5011E96A97EC214735F35B /* Foundation.framework in Frameworks */,
+				1C95C15C956134C05CC00F6C3282A96A /* SipHash.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06EE17046F64C4469187F6BE46199640 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A886C62CF28000A66BC810D5054E498E /* BigInt.modulemap */,
+				A2ECFE1ED761350BC37D7B8D56913214 /* BigInt.xcconfig */,
+				34FAB30C5C824ABFACFF64179A8D7103 /* BigInt-dummy.m */,
+				93C975F15DB7E646DD373F3B1D142313 /* BigInt-Info.plist */,
+				61C7008726503C50CF0346643E2B4FE2 /* BigInt-prefix.pch */,
+				5FE814EA0AA2C1865E718B3365955320 /* BigInt-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BigInt";
+			sourceTree = "<group>";
+		};
+		0D21B236D71DC1C2DFEE583E34ECDC96 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				0CFCCB523FE475C0E8533AA0FB778773 /* afterlife.swift */,
+				B2888E3421BA9F6D9F0F4783C8138F56 /* NSNotificationCenter+AnyPromise.h */,
+				E0C2FDD89A31300FF5E7554FB5A5AE9B /* NSNotificationCenter+AnyPromise.m */,
+				FDD128775A1F1610EFC67CAC0BC4C8FE /* NSNotificationCenter+Promise.swift */,
+				7646A81D7E0FFBF8FFD202D815111D05 /* NSObject+Promise.swift */,
+				043815A3BD91B2E21FCBB9E7235ACF1E /* NSTask+AnyPromise.h */,
+				2D04967B1D9B1A4A98BC7337A83B5E7D /* NSTask+AnyPromise.m */,
+				CF0B6F92B1AAEE50B3E371B807E58522 /* NSURLSession+AnyPromise.h */,
+				B6A242B9753ADBD3CCD922A25C5081BA /* NSURLSession+AnyPromise.m */,
+				90CDAFE959B5F7C452FDD53CF8324BB1 /* NSURLSession+Promise.swift */,
+				5071DA24522CA38029A51E34CE0C6C6D /* PMKFoundation.h */,
+				BE91678C87C8B4AA545BE7AA0AB12474 /* Process+Promise.swift */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
+		};
+		13B0A913FF46DFC0289C981F33485FC1 /* SipHash */ = {
+			isa = PBXGroup;
+			children = (
+				85FD1D8A39B5EF6E5CA14A2A3C67EE04 /* Primitive Types.swift */,
+				8D393F0C395AB711C16DDBC282011B26 /* RandomUInt64.swift */,
+				A6B491AA7F2E4EAFD8954C23DA0C1E5A /* SipHashable.swift */,
+				8D4E8535187C3617FA1F486D73554B22 /* SipHasher.swift */,
+				CAEC1F2026AEB8CD170B796D1833B93D /* Support Files */,
+			);
+			name = SipHash;
+			path = SipHash;
+			sourceTree = "<group>";
+		};
+		1927030874788DE5ED2C0DD469847FC6 /* Pods-EOSBlockSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				7EC62C1327765D57AE5887F15268B9B0 /* Pods-EOSBlockSampleTests.modulemap */,
+				9FAE4304EFEA520208B8CAFB195767F6 /* Pods-EOSBlockSampleTests-acknowledgements.markdown */,
+				3BBDC90E5F6AE0679CE349339C3D4338 /* Pods-EOSBlockSampleTests-acknowledgements.plist */,
+				CB017B91EA186130D293BD6D0C09AB3D /* Pods-EOSBlockSampleTests-dummy.m */,
+				999D8ECC5B457542DCF23F44FDA37D7B /* Pods-EOSBlockSampleTests-frameworks.sh */,
+				D5CC2C5B017849A72B0E33704DB2BD21 /* Pods-EOSBlockSampleTests-Info.plist */,
+				721BBB2033C7A658B5DD9593F7C58A1E /* Pods-EOSBlockSampleTests-umbrella.h */,
+				75E387AD78152538163B80FEB16B9EBB /* Pods-EOSBlockSampleTests.debug.xcconfig */,
+				933C7C0969D5EADCE80AF8FED66F63BE /* Pods-EOSBlockSampleTests.release.xcconfig */,
+			);
+			name = "Pods-EOSBlockSampleTests";
+			path = "Target Support Files/Pods-EOSBlockSampleTests";
+			sourceTree = "<group>";
+		};
+		419C6B48399B03D899B5C7B874AB5872 /* CorePromise */ = {
+			isa = PBXGroup;
+			children = (
+				FA1D5FA9AE91C06D715E5D0901924299 /* after.m */,
+				0873BF31FE78D6A156FF7AF3F2D52DB8 /* after.swift */,
+				CAB4C9819767BB0BC8A7BF466EB3544F /* AnyPromise.h */,
+				66EBF6B336EC9318170E8C4948C3C0C0 /* AnyPromise.m */,
+				27E3F3A3D2901D46DEC0970154C77B5C /* AnyPromise.swift */,
+				19AD887CBB99A2659170A6EF71B66DA9 /* Box.swift */,
+				9D075EF859DEBBF1C3B69D9F5AF112CA /* Catchable.swift */,
+				FC4714C19E1E43CCBE12BB2ABD188293 /* Configuration.swift */,
+				2D6C927425CBB6C622EADEF0E7E33460 /* CustomStringConvertible.swift */,
+				1D878F76AFD6ED4B4D80A9E8CC0871A7 /* Deprecations.swift */,
+				4989B463A89B4638B01327C8F4EB6D6D /* dispatch_promise.m */,
+				0DA90B85788C63E687A5C7D1F2E0DF36 /* Error.swift */,
+				07A863BF88D3AA32470CCED6E5E7D512 /* firstly.swift */,
+				73024F92FB09C05A1B3D53F9402D37DB /* fwd.h */,
+				2550E2330939EF15537C3216B13EFBC5 /* Guarantee.swift */,
+				053DFB90963FA3BFBAB13D5D66F5738E /* hang.m */,
+				D0D7B3DC95470F71FB61AB146B2B8975 /* hang.swift */,
+				BF3116D1D9AD41FAF671D82F5F33E7A6 /* join.m */,
+				E05F67C86B8A9FEB4B2105AAE54BAEED /* LogEvent.swift */,
+				1ED70FE441A74BFABF6338ECD6842153 /* Promise.swift */,
+				6AC87A45B5B17BB7604EFF932AA87971 /* PromiseKit.h */,
+				72F0E57169A489CC2F667664D792C7CF /* race.m */,
+				C0BA3C29DFC1116B5D378D55F989C7F0 /* race.swift */,
+				97FD94EDEB1F387DE91433B0E0C6C813 /* Resolver.swift */,
+				DEDE90F4026BBFBE8BC1BA5D79ACFA71 /* Thenable.swift */,
+				580800616375621E1F2D71E6310F29CF /* when.m */,
+				AFA512A6C1B63A89F89D710ECD3C6D55 /* when.swift */,
+			);
+			name = CorePromise;
+			sourceTree = "<group>";
+		};
+		4FCA7629EAFC6AFB1BA350BA35D52935 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2DB087D696A225A727BDECB62F83D4B /* BigInt.framework */,
+				5B991182475BE5EA4B050D55A7ABF21B /* PromiseKit.framework */,
+				E62E6C50E2E254F9917B188E09E01573 /* SipHash.framework */,
+				804B498145963CB47C4039692680E09C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		614386D6BFF7F918D07BDDA0217341DE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EF67752A5B021B59C1575032B325090 /* EosioSwift.modulemap */,
+				2234986C4AA2AF1AD8B0DB8BA2798DD0 /* EosioSwift.xcconfig */,
+				5C1DECA65660A6D59A2353C185E42155 /* EosioSwift-dummy.m */,
+				6C73788D6EB57A67734F14F71B87B553 /* EosioSwift-Info.plist */,
+				76F66464CAC83B6500514B0D3C1A0E43 /* EosioSwift-prefix.pch */,
+				7DD3E83C5E2C6862E201083DDC8EBE17 /* EosioSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/EosioSwift";
+			sourceTree = "<group>";
+		};
+		685F09EE4C98A42063BD515C3242A044 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E537EAEA669F9BFA02AC3E470CC279A6 /* PMKUIKit.h */,
+				65B8B2BFFD7A5B59B11E424BC0D0EF60 /* UIView+AnyPromise.h */,
+				7CAB514D8DB3CCC67DCA17629ECCA409 /* UIView+AnyPromise.m */,
+				05A1233D4C9FFA3C589B747425D6382B /* UIView+Promise.swift */,
+				1BF186A402B924CC6A5B9243AD9ED101 /* UIViewController+AnyPromise.h */,
+				8DBBFBF5177E78AB4B85AE1BA083AA33 /* UIViewController+AnyPromise.m */,
+				0B839EF61FB1903D09305332899DB8F1 /* UIViewPropertyAnimator+Promise.swift */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		804B498145963CB47C4039692680E09C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				30B6D22121F87850F475E7FE68C56A21 /* Foundation.framework */,
+				DE0B55669A4030C8F0AE9F41ED237750 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		8315C7D477E3F92C50DF9DCFC9FD6B7D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				16B7352C52D0AEC4C7607940C2C8A0BB /* PromiseKit.modulemap */,
+				E70622C3F74C8FE51A92B8DD7D68EDF8 /* PromiseKit.xcconfig */,
+				C89E57BEECB1F835F65AE8534EC0AEE1 /* PromiseKit-dummy.m */,
+				77BE300BF4849B6ACC73AEE8A2B03942 /* PromiseKit-Info.plist */,
+				90C190BB072F423C615C9C490204B84A /* PromiseKit-prefix.pch */,
+				6EAFD712D8D54786CE99E2D4EA9F0458 /* PromiseKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PromiseKit";
+			sourceTree = "<group>";
+		};
+		85AC192EB18132679711400FFD585DC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC59750990737F3C0AF73941A1C87BB6 /* BigInt */,
+				F4C33A653B5538E86078A666799F019D /* EosioSwift */,
+				C86208AAE5E3DD4A64608DF3EEF8E2A1 /* PromiseKit */,
+				13B0A913FF46DFC0289C981F33485FC1 /* SipHash */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		99797E940009DB08A19D91738E9CE1D3 /* Pods-EOSBlockSample */ = {
+			isa = PBXGroup;
+			children = (
+				C92BF3C178014E9A497128A832ED6303 /* Pods-EOSBlockSample.modulemap */,
+				75988CE36994E2742274556B6244536B /* Pods-EOSBlockSample-acknowledgements.markdown */,
+				A7E37DB463F8167B23E9C0F8C11E462D /* Pods-EOSBlockSample-acknowledgements.plist */,
+				65F7BD532A674976E8D3BDFE2A8F51DA /* Pods-EOSBlockSample-dummy.m */,
+				0C941E7A02FF7225F662365A2196259D /* Pods-EOSBlockSample-frameworks.sh */,
+				34D19AE0546102EE7DF8B782CF06932E /* Pods-EOSBlockSample-Info.plist */,
+				37280EDBBB462359F2850C59A1A8B4DD /* Pods-EOSBlockSample-umbrella.h */,
+				4A455080EA6A290EA7045C01476B3D0F /* Pods-EOSBlockSample.debug.xcconfig */,
+				E5B659BF6A5052886584743ED742B584 /* Pods-EOSBlockSample.release.xcconfig */,
+			);
+			name = "Pods-EOSBlockSample";
+			path = "Target Support Files/Pods-EOSBlockSample";
+			sourceTree = "<group>";
+		};
+		9A4AC088D47EB2E73EBF1B1F89E73C8E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				99797E940009DB08A19D91738E9CE1D3 /* Pods-EOSBlockSample */,
+				1927030874788DE5ED2C0DD469847FC6 /* Pods-EOSBlockSampleTests */,
+				F71A70DA74DA0F44315666C08A430B4F /* Pods-EOSBlockSampleUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C86208AAE5E3DD4A64608DF3EEF8E2A1 /* PromiseKit */ = {
+			isa = PBXGroup;
+			children = (
+				419C6B48399B03D899B5C7B874AB5872 /* CorePromise */,
+				0D21B236D71DC1C2DFEE583E34ECDC96 /* Foundation */,
+				8315C7D477E3F92C50DF9DCFC9FD6B7D /* Support Files */,
+				685F09EE4C98A42063BD515C3242A044 /* UIKit */,
+			);
+			name = PromiseKit;
+			path = PromiseKit;
+			sourceTree = "<group>";
+		};
+		CAEC1F2026AEB8CD170B796D1833B93D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE2A5B26FC1443A739E71351CD4067E9 /* SipHash.modulemap */,
+				144773363482C9223FC66CC73A240641 /* SipHash.xcconfig */,
+				FD3CB6636FBBE3C837E776D9EEDE06CC /* SipHash-dummy.m */,
+				7A3FE15645832961FD90324C7655D7F1 /* SipHash-Info.plist */,
+				2378C1979920707BDFA9C48C1D8469FF /* SipHash-prefix.pch */,
+				471FE917CD3BBA9837A74E2C8EE3B3B9 /* SipHash-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SipHash";
+			sourceTree = "<group>";
+		};
+		CC59750990737F3C0AF73941A1C87BB6 /* BigInt */ = {
+			isa = PBXGroup;
+			children = (
+				BAC034FAD89776017AB5A2EB5D453CDD /* Addition.swift */,
+				26B61071FF003DFEA724A8C5607B3DCD /* BigInt.swift */,
+				D631B5855DD79BDF8815B72F17FE3EC2 /* BigUInt.swift */,
+				F09F54237AFDE24FF28A4AA4F615B884 /* Bitwise Ops.swift */,
+				FC60A49DC507A57511618C7035BA4900 /* Codable.swift */,
+				53EC6C233E861488D615A623DF9CD382 /* Comparable.swift */,
+				88962EE2AF2742CA18466C557B49C946 /* Data Conversion.swift */,
+				9E09311F190C1D593AB4F4FFD742269F /* Division.swift */,
+				9F906AD01CC327BFA1FA41B63EF594D5 /* Exponentiation.swift */,
+				53E9ABC8A2FC857F78C93D6CEE173382 /* Floating Point Conversion.swift */,
+				486B28508B40CBC9D0406D7BDFE28D54 /* GCD.swift */,
+				010E682734B1A8A25602D3DA72742574 /* Hashable.swift */,
+				F7EF0E2433554EFFEB34725B51FD177A /* Integer Conversion.swift */,
+				4FD5BAF5F13B8F95525FDD567C27E1D5 /* Multiplication.swift */,
+				2B736509578AC8732B1A08F681A560A6 /* Prime Test.swift */,
+				99F0EDF4C331A023F082EB40C77B4F66 /* Random.swift */,
+				62EABB67D211F34DAFCBB49E8EC69C72 /* Shifts.swift */,
+				229ACFACA6D9DBB7B499B9FD09392D25 /* Square Root.swift */,
+				265541E0970AB9F8F2A5A313383388D3 /* Strideable.swift */,
+				EC8EE644A956FA767C1111F0A1BBF078 /* String Conversion.swift */,
+				3A517821A60BA8046FB03AAFA9A304C7 /* Subtraction.swift */,
+				8700095FB96C8A4354B329868A0092CA /* Words and Bits.swift */,
+				06EE17046F64C4469187F6BE46199640 /* Support Files */,
+			);
+			name = BigInt;
+			path = BigInt;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				4FCA7629EAFC6AFB1BA350BA35D52935 /* Frameworks */,
+				85AC192EB18132679711400FFD585DC6 /* Pods */,
+				F5F8B0037340D45A4F420FF8C8720E98 /* Products */,
+				9A4AC088D47EB2E73EBF1B1F89E73C8E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		F4C33A653B5538E86078A666799F019D /* EosioSwift */ = {
+			isa = PBXGroup;
+			children = (
+				9E54FB40BCC7EFE4EBC95782CF877440 /* AllResponseProtocols.swift */,
+				D85778A1102233DB3FC6E62CD8FB7B3F /* ArrayExtensions.swift */,
+				38CE244CE7F678BFDEE588941A5E2201 /* Base58String.swift */,
+				B8104802618366A3C2F5E01AECD15490 /* DataExtensions.swift */,
+				4438AF70AAF3ABEBD4D9DA26C91B9153 /* DateExtensions.swift */,
+				1AE97B4DDB086865E5C2D99B5757A274 /* DictionaryExtensions.swift */,
+				482BC3A2862136E1214307B2FBC517DC /* DynamicKey.swift */,
+				C0C3724142C17EBE7BDB812E849FA54E /* EncodableExtensions.swift */,
+				F80C93139BF2682BFD6D4681CACA7C08 /* EosioAbiProvider.swift */,
+				E3C31B8F497B3FD1381FCCBF8A93A4CE /* EosioAbiProviderProtocol.swift */,
+				83E5C726F046DB6313539A85349DC76B /* EosioError.swift */,
+				E6E3D473887DA20F62B4D4B5119A9BCC /* EosioKeySignatureExtensions.swift */,
+				04DD6F1D1F17A55B50D06753C1C446AB /* EosioName.swift */,
+				C3A42DB9128B5096E9D0C17051710BDE /* EosioResult.swift */,
+				01571EADA7F3F7E2A87F26F28437A5B5 /* EosioRpcProvider.swift */,
+				220C995071E3D16492AC5B17E8A140CA /* EosioRpcProviderEndpointsCallbacks.swift */,
+				8DE4104DA307ED571187F4FE80E8AB24 /* EosioRpcProviderEndpointsForProtocol.swift */,
+				3261D160628AEF4E85BDEA12DC59F683 /* EosioRpcProviderEndpointsPromises.swift */,
+				4CD16668B90B8440BDCE075B7EEA000D /* EosioRpcProviderProtocol.swift */,
+				CCD8C7A9FB2985C6352E4844D3A7F748 /* EosioSerializationProviderProtocol.swift */,
+				0181808A0EE958B993B8AAAAFE98E4E6 /* EosioSignatureProviderProtocol.swift */,
+				92AFE7BCB567BE69FE4A8A5607142DD1 /* EosioTransaction.swift */,
+				299EFC924A99FBB000F4E910B1F9C425 /* EosioTransactionAbis.swift */,
+				894ED2600DD2757B723F8EABDAA30C83 /* EosioTransactionAction.swift */,
+				73486F9DAD78F00D5868BD7D8B83B0BA /* EosioTransactionFactory.swift */,
+				C7C054323B49C5184379F78304C4498B /* EosioTransactionPromises.swift */,
+				A13E6323E817AF8429DE506B2A9BE274 /* EosioUInt64.swift */,
+				956F15649B8A5B88914BF8858845E1B3 /* LinkedList.swift */,
+				94393F7C861CB3AA7B576698106367EE /* Queue.swift */,
+				1C6C4FF6F8D54A85FF4A1A6A76EB1BE1 /* RequestModels.swift */,
+				FABCD2A74A29EF56A25CB961B2050BDA /* ResolverExtensions.swift */,
+				7BA28DB4A1AFCAE8D72B51D5B46769AB /* RIPEMD160.swift */,
+				41BAE9F85B93B87ED99EB697BDD8060E /* RpcProviderRequestModels.swift */,
+				B926AF9749EA0FA90E23087F153F535E /* RpcProviderResponseModels.swift */,
+				7933AFF7FB2D29DA3C2937944A6AAF08 /* StringExtensions.swift */,
+				D62D58A2D368416FBC6E5F18BE54CDE7 /* ZAssert.swift */,
+				614386D6BFF7F918D07BDDA0217341DE /* Support Files */,
+			);
+			name = EosioSwift;
+			path = EosioSwift;
+			sourceTree = "<group>";
+		};
+		F5F8B0037340D45A4F420FF8C8720E98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91BB24BA472AF523E913108C9AA301F2 /* BigInt.framework */,
+				936F7D6A5E573964F71409D62826A8BB /* EosioSwift.framework */,
+				07FA5AC6AD59F96AE5BEE264977EDC9D /* Pods_EOSBlockSample.framework */,
+				670DABC1C1D0F59003E7DAA987920FD0 /* Pods_EOSBlockSampleTests.framework */,
+				B493DE2394A4E96F54C1BAE23C26936A /* Pods_EOSBlockSampleUITests.framework */,
+				002B1E88BA14EBF633CD66EBFBA107E9 /* PromiseKit.framework */,
+				A2111396C1985EBD1171FE7B023FBE24 /* SipHash.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F71A70DA74DA0F44315666C08A430B4F /* Pods-EOSBlockSampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0A346085738C10BAA430825A9820B65B /* Pods-EOSBlockSampleUITests.modulemap */,
+				45EC6472DA5772512B334E8EA26A236C /* Pods-EOSBlockSampleUITests-acknowledgements.markdown */,
+				8A74E19AAF88D44108C4F77E95855D2D /* Pods-EOSBlockSampleUITests-acknowledgements.plist */,
+				9E874A86D2A9DB3BE27E85A0D30E665C /* Pods-EOSBlockSampleUITests-dummy.m */,
+				8CAB79E84494D933E756C9BE328DFD18 /* Pods-EOSBlockSampleUITests-frameworks.sh */,
+				FC993CB9CFBDA0D428DBB51955BE4F80 /* Pods-EOSBlockSampleUITests-Info.plist */,
+				FBA846F1FADADB16C096BB2A1C806219 /* Pods-EOSBlockSampleUITests-umbrella.h */,
+				49C2475472EB1162C97172A3E5E48BEB /* Pods-EOSBlockSampleUITests.debug.xcconfig */,
+				428C0CB398CEFE976792C7BC7BFCD394 /* Pods-EOSBlockSampleUITests.release.xcconfig */,
+			);
+			name = "Pods-EOSBlockSampleUITests";
+			path = "Target Support Files/Pods-EOSBlockSampleUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		117FF67493E8FFEAC5613F5D47C2BAAE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3486EE18A5530E61B71991144CE1C904 /* AnyPromise.h in Headers */,
+				6BBAA95023397C5B246816D7D7E30B09 /* fwd.h in Headers */,
+				A233408D53C499FB61AA16736399A28A /* NSNotificationCenter+AnyPromise.h in Headers */,
+				0A6384AD0EA6210E1C1F25AA6DA502B6 /* NSTask+AnyPromise.h in Headers */,
+				EBAD8930E547B0137D959FA5780D5ABB /* NSURLSession+AnyPromise.h in Headers */,
+				3A9E28A207B438E8758D8C840E9D133F /* PMKFoundation.h in Headers */,
+				D73167B08F4538D788D1CB7D08AAEA77 /* PMKUIKit.h in Headers */,
+				DA46227F4BE1C9CD1FECC43DE187C2F6 /* PromiseKit-umbrella.h in Headers */,
+				1FAD2F572D1E919BB9AB4F437B6EE6E7 /* PromiseKit.h in Headers */,
+				874D54168AA9F7605CB8926E25D2F64F /* UIView+AnyPromise.h in Headers */,
+				A446BC4ABB45C2C72E3838EBDF254933 /* UIViewController+AnyPromise.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B74D336ACAB83B7DB4D90588BC6A9F9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC4E5A01192E394B4E747F827E183E05 /* Pods-EOSBlockSampleUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D9B0919806C60C0D7E025706DDD7154 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBCD82BD21F15F62247F27434A670979 /* SipHash-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CB59F2E832C8297B18BB2C983F399DB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F236B585E6771005D58C66F736353254 /* Pods-EOSBlockSample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CD2E39C0F6F50C9F3266E97055C64AF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB917910338AA95704114BD816F64912 /* Pods-EOSBlockSampleTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E06A5FDBC5E1423880670EC0AEB72B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3BA8CCBED080C60B9C5F23A930CBC68 /* EosioSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9928524D4B6545DA0E9E5103BD1CDA29 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4A4F6C599D996DC7FC7524EF12A1562 /* BigInt-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		09DD83B7D075842A3A5105AD410BD38A /* BigInt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B62CBA5C84C59088B5280F5468A5E982 /* Build configuration list for PBXNativeTarget "BigInt" */;
+			buildPhases = (
+				9928524D4B6545DA0E9E5103BD1CDA29 /* Headers */,
+				ADA6179E0CB7FB47D1D890C4956C3B0C /* Sources */,
+				BB77212EECD890F9965661551AE7408F /* Frameworks */,
+				DB4C80C4DFC41A98DDFF70C18AFEE4E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A13B599C2E16CC7F91CB6E46FE0F164 /* PBXTargetDependency */,
+			);
+			name = BigInt;
+			productName = BigInt;
+			productReference = 91BB24BA472AF523E913108C9AA301F2 /* BigInt.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		377DAE4050D766B30C3A484B8525BB35 /* SipHash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3272F7DC679A387A652228C5B259A1B6 /* Build configuration list for PBXNativeTarget "SipHash" */;
+			buildPhases = (
+				2D9B0919806C60C0D7E025706DDD7154 /* Headers */,
+				7C8ECBAE759A22BFA41F1FC1B3500F6D /* Sources */,
+				AF1C77090CBF9C98227F259991D7A102 /* Frameworks */,
+				279DDBB6F88C52D684D816A5672F02F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SipHash;
+			productName = SipHash;
+			productReference = A2111396C1985EBD1171FE7B023FBE24 /* SipHash.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		48DD11FE3425410A409E55A889EACD4E /* EosioSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C655F71A0CA9757032246EFA0B6361C /* Build configuration list for PBXNativeTarget "EosioSwift" */;
+			buildPhases = (
+				74E06A5FDBC5E1423880670EC0AEB72B /* Headers */,
+				B612C90CF1A2E347A4E807509C052D2D /* Sources */,
+				0472676FC0F914C120937A1250319BBC /* Frameworks */,
+				8E7802D2E5CA57A0CF33D25A8CEFFA55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54605A478FC1772327B8C88ED51CD239 /* PBXTargetDependency */,
+				E5933EB0696F0E5223F7DE1F2DE88E9F /* PBXTargetDependency */,
+			);
+			name = EosioSwift;
+			productName = EosioSwift;
+			productReference = 936F7D6A5E573964F71409D62826A8BB /* EosioSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		507190E19099972A2A3A308C8B10629B /* Pods-EOSBlockSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5057ECF428851569626BB96F79B34636 /* Build configuration list for PBXNativeTarget "Pods-EOSBlockSampleTests" */;
+			buildPhases = (
+				6CD2E39C0F6F50C9F3266E97055C64AF /* Headers */,
+				5B87C56BFC3D24A255B3C28D059E0FE6 /* Sources */,
+				28C5204048540465A0D748221A4725A1 /* Frameworks */,
+				B217EABD962BB691A84D664CB438FCA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD6F72571C4E91E1FD04A4AC9A5317D2 /* PBXTargetDependency */,
+				F12E1A1D5C05996C950E95ED1F9AB351 /* PBXTargetDependency */,
+				CF3BD63C99A223B92D5413967624BD8A /* PBXTargetDependency */,
+				1D8DEFD4F04A3AEA598D784E56D38F96 /* PBXTargetDependency */,
+				C06B133FCF71277A0714790B0DE81DEC /* PBXTargetDependency */,
+			);
+			name = "Pods-EOSBlockSampleTests";
+			productName = "Pods-EOSBlockSampleTests";
+			productReference = 670DABC1C1D0F59003E7DAA987920FD0 /* Pods_EOSBlockSampleTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7C2933D831299EAE93A4B903D7713D51 /* Pods-EOSBlockSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21020C076CD3EA7320B9977C7D1E7655 /* Build configuration list for PBXNativeTarget "Pods-EOSBlockSample" */;
+			buildPhases = (
+				6CB59F2E832C8297B18BB2C983F399DB /* Headers */,
+				2D6AE119BF331614BEB4A2DDAA117FC8 /* Sources */,
+				A6E2E7EBB71D0DC1BAC6485C1CA30F71 /* Frameworks */,
+				5E0945F7AE50986A58B0D47C923AA3CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BAD28D309DA86702176965EBB151A8F /* PBXTargetDependency */,
+				CAF8361F1E6A67CFCCE7D6ADD95EE98E /* PBXTargetDependency */,
+				3035A98C6530F3D23F0759A0624D5E27 /* PBXTargetDependency */,
+				820B4B5BADC0664359C1BD1AB90E2DFC /* PBXTargetDependency */,
+			);
+			name = "Pods-EOSBlockSample";
+			productName = "Pods-EOSBlockSample";
+			productReference = 07FA5AC6AD59F96AE5BEE264977EDC9D /* Pods_EOSBlockSample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7C579CE66A1E7A9AA33CA5F97F9C22C5 /* PromiseKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B04BFC18BF1FC640F18A367CDBA037EA /* Build configuration list for PBXNativeTarget "PromiseKit" */;
+			buildPhases = (
+				117FF67493E8FFEAC5613F5D47C2BAAE /* Headers */,
+				11E42A7A8935565CB2086B6EA428E617 /* Sources */,
+				51F274DE137A7E13560F681F1303F04F /* Frameworks */,
+				92997E22B64EBA4C526E69CBCB72A154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PromiseKit;
+			productName = PromiseKit;
+			productReference = 002B1E88BA14EBF633CD66EBFBA107E9 /* PromiseKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FA45CB216B0F242716FCB057ADBD26B8 /* Pods-EOSBlockSampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD07F27F6151333CF4737E6722CB70CE /* Build configuration list for PBXNativeTarget "Pods-EOSBlockSampleUITests" */;
+			buildPhases = (
+				2B74D336ACAB83B7DB4D90588BC6A9F9 /* Headers */,
+				DA80BB2015D639AC31FAF7A1ED97B5BF /* Sources */,
+				32F0A877FF0B089603A8F98909654733 /* Frameworks */,
+				997482649661CD63B10331AA0B1AD853 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0ED19D0C31CFC87FB47B8168B1A35DE /* PBXTargetDependency */,
+				BEB8B50373448388F64FF75D16C70D76 /* PBXTargetDependency */,
+				B72BD74430D979FE77FB52646DFED91A /* PBXTargetDependency */,
+				C851D158588DB11407BBA41DC7F57B77 /* PBXTargetDependency */,
+				88BFFF07C644C980395779A765ECC1CA /* PBXTargetDependency */,
+			);
+			name = "Pods-EOSBlockSampleUITests";
+			productName = "Pods-EOSBlockSampleUITests";
+			productReference = B493DE2394A4E96F54C1BAE23C26936A /* Pods_EOSBlockSampleUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = F5F8B0037340D45A4F420FF8C8720E98 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09DD83B7D075842A3A5105AD410BD38A /* BigInt */,
+				48DD11FE3425410A409E55A889EACD4E /* EosioSwift */,
+				7C2933D831299EAE93A4B903D7713D51 /* Pods-EOSBlockSample */,
+				507190E19099972A2A3A308C8B10629B /* Pods-EOSBlockSampleTests */,
+				FA45CB216B0F242716FCB057ADBD26B8 /* Pods-EOSBlockSampleUITests */,
+				7C579CE66A1E7A9AA33CA5F97F9C22C5 /* PromiseKit */,
+				377DAE4050D766B30C3A484B8525BB35 /* SipHash */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		279DDBB6F88C52D684D816A5672F02F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E0945F7AE50986A58B0D47C923AA3CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E7802D2E5CA57A0CF33D25A8CEFFA55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92997E22B64EBA4C526E69CBCB72A154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		997482649661CD63B10331AA0B1AD853 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B217EABD962BB691A84D664CB438FCA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB4C80C4DFC41A98DDFF70C18AFEE4E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11E42A7A8935565CB2086B6EA428E617 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA914D916BF9D06044044171207882AE /* after.m in Sources */,
+				DD8A2089392EBA3DDFBDD84E3074C12B /* after.swift in Sources */,
+				1964412C86CEA3BB0D30712B26599FF7 /* afterlife.swift in Sources */,
+				7A343FE7F56C3A4C4DFEC7C9B05A7522 /* AnyPromise.m in Sources */,
+				BD344D2291D320567192D2FE54A72262 /* AnyPromise.swift in Sources */,
+				196E0AE5CE7DDEC1FACA203D304B4878 /* Box.swift in Sources */,
+				74EE18D86F06644C46DE6AB16E99E107 /* Catchable.swift in Sources */,
+				7BCB5CC3BF43B172D005B5480AC16AD8 /* Configuration.swift in Sources */,
+				B0AF690FBC44D61FDC8A7D8B60C3BA21 /* CustomStringConvertible.swift in Sources */,
+				5C2CB57871ECA3EBE7A7A6B2EBD38CE9 /* Deprecations.swift in Sources */,
+				82565A1FD5D41580133C1F60D73032A4 /* dispatch_promise.m in Sources */,
+				1646508813750E610B1A79E7947119FF /* Error.swift in Sources */,
+				6B62405389DC388C23F07A72F3F5859F /* firstly.swift in Sources */,
+				96CB625CB22B40DDA674061FB0224BED /* Guarantee.swift in Sources */,
+				CA39C4AB3BDD89D446F953A7FB7452E8 /* hang.m in Sources */,
+				01159D69B46B050F1013BB0D110AF6C1 /* hang.swift in Sources */,
+				1DC737F6B08AF2A1FE5457806456602A /* join.m in Sources */,
+				011C4938241842C1AB85347D5B1D9221 /* LogEvent.swift in Sources */,
+				82CABAEE4BBD0AD2FFC999B0EB1BEF80 /* NSNotificationCenter+AnyPromise.m in Sources */,
+				7ACD13CF7B694D37BB3AF04950AF6CAA /* NSNotificationCenter+Promise.swift in Sources */,
+				A3EF24FA9BE07110EF0F3CDD290BB609 /* NSObject+Promise.swift in Sources */,
+				8BCA955685EE52160B88FD8738A8D71E /* NSTask+AnyPromise.m in Sources */,
+				A2F750790753C8F86DBE7389643F997F /* NSURLSession+AnyPromise.m in Sources */,
+				8228878EE258C2CC8B685F67F6741971 /* NSURLSession+Promise.swift in Sources */,
+				A845E33868585804317382FE7687AD40 /* Process+Promise.swift in Sources */,
+				B7A477214C55718A3FF881D14F52B7F3 /* Promise.swift in Sources */,
+				3C3916156A3CBCFA0D786EC90D47FF05 /* PromiseKit-dummy.m in Sources */,
+				695836A3C7A2D11D297CA3ADAC0AE989 /* race.m in Sources */,
+				7F6EA4E17DFF8F8B6EC732192043D8EF /* race.swift in Sources */,
+				2630873B9B74EF9885DF64E5789CE8CF /* Resolver.swift in Sources */,
+				A2E8BE3337E53F75681D679E4C152284 /* Thenable.swift in Sources */,
+				AF8BA7384F08DA36D22F4897EA33AEBF /* UIView+AnyPromise.m in Sources */,
+				716028E45EA5D94A93B0F0775E11B50E /* UIView+Promise.swift in Sources */,
+				90608F940486B06CE9B9C8EDC4C4447F /* UIViewController+AnyPromise.m in Sources */,
+				7841AECD681808632A9526F9BEAA34DD /* UIViewPropertyAnimator+Promise.swift in Sources */,
+				8D1E529B19AD725E577093A5A4376752 /* when.m in Sources */,
+				B4613D7EF7F95F2BD0DF9574A43C13AB /* when.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D6AE119BF331614BEB4A2DDAA117FC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AA870EB37B685921077AC4A6BE073D /* Pods-EOSBlockSample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B87C56BFC3D24A255B3C28D059E0FE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBD218B07F0E809D378CA85E1FCADCCB /* Pods-EOSBlockSampleTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C8ECBAE759A22BFA41F1FC1B3500F6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F686491057470AF722C4C64D0618CF24 /* Primitive Types.swift in Sources */,
+				9C462DDD528A63484E0B04A3574C098D /* RandomUInt64.swift in Sources */,
+				022D58E7FD09B6078E82C0BA17D7A280 /* SipHash-dummy.m in Sources */,
+				B45CCFEF82EFD6364E76F325ACA86188 /* SipHashable.swift in Sources */,
+				24A271C86DB9EA2EEBBFE994D3AE4E8A /* SipHasher.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA6179E0CB7FB47D1D890C4956C3B0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6EF95DBB09BF975D9DC84DC83B21B0C /* Addition.swift in Sources */,
+				1B9C61E5BAA6E3A408FFD4BD61BB4C8A /* BigInt-dummy.m in Sources */,
+				AE8BA6528C09FADE43F9AD0A1EB05485 /* BigInt.swift in Sources */,
+				1BCB8099E879AAFB0CA8E5C14F31A7C2 /* BigUInt.swift in Sources */,
+				BBE28663A24C24F07398FDEC6AA05093 /* Bitwise Ops.swift in Sources */,
+				FDCB75406CA8A7B647C6C867139BD210 /* Codable.swift in Sources */,
+				8090D8DBC59D7179F27CFC6FCEB7EE4B /* Comparable.swift in Sources */,
+				BEBFEAA681041605033AF64235BB0C7A /* Data Conversion.swift in Sources */,
+				473BE8A2C7D43099005EF7A2B9925204 /* Division.swift in Sources */,
+				F5C3BB6C61A28391A95D2423471D6C8E /* Exponentiation.swift in Sources */,
+				F7E11CB0002E5E033EF0FDD930369004 /* Floating Point Conversion.swift in Sources */,
+				6D18E06E4EE2428564AF36F437285DA0 /* GCD.swift in Sources */,
+				064F77E7396B6C3AB9B4AE74A570D7B5 /* Hashable.swift in Sources */,
+				0B8E1BBB09D5498D203BC777ABF11F1E /* Integer Conversion.swift in Sources */,
+				A7AEB1697CE450BCDA3DE6613A221EAA /* Multiplication.swift in Sources */,
+				A8CBEF4122547F83FB22CA5EB47DB376 /* Prime Test.swift in Sources */,
+				708FEA86951AEEE9045D987CAA73FCCC /* Random.swift in Sources */,
+				034E659188309BBE64F59440771E3204 /* Shifts.swift in Sources */,
+				FC2F67809A55823F013E536EF56317A7 /* Square Root.swift in Sources */,
+				3E8B4C8A9078745EDEDBE758AB219D29 /* Strideable.swift in Sources */,
+				F61B3930087A07804A050828B5E5844A /* String Conversion.swift in Sources */,
+				E718475146DB682A0816804A4B43495E /* Subtraction.swift in Sources */,
+				12CD90EB44F6E0EA5BC7ED6D30ACD9A2 /* Words and Bits.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B612C90CF1A2E347A4E807509C052D2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95703DFC1B5B4E735BD6BFBB04975457 /* AllResponseProtocols.swift in Sources */,
+				F24DF6E2144ED5183A332E13018BE7CE /* ArrayExtensions.swift in Sources */,
+				A57B812658B963E3A4A36FDF7D0F8CEB /* Base58String.swift in Sources */,
+				7B02A9E1CCF59B0D0CD2FC38CF20ACFB /* DataExtensions.swift in Sources */,
+				D3AFCDBC8B1F698935AEF5BB57ADAD91 /* DateExtensions.swift in Sources */,
+				2AD6F205F9EF155653376A3F53373AB9 /* DictionaryExtensions.swift in Sources */,
+				2C06D529D0A984F155F3CF7ED2251961 /* DynamicKey.swift in Sources */,
+				442BE75CB78929A80AEF551F94562726 /* EncodableExtensions.swift in Sources */,
+				1CD46EA75AD8C5D0041A8E537198A49B /* EosioAbiProvider.swift in Sources */,
+				667111B91B70AC8C0F044328A6FBC3CD /* EosioAbiProviderProtocol.swift in Sources */,
+				BA08280357F44BD7D3F599716B448779 /* EosioError.swift in Sources */,
+				C6F7DF0E4426ADBD2F17843C17F4746D /* EosioKeySignatureExtensions.swift in Sources */,
+				0AF605CD0F959D9E7B1C34805FC8793D /* EosioName.swift in Sources */,
+				01AEC4389DD57F0508C8B06203A84068 /* EosioResult.swift in Sources */,
+				D65A628109B6FC5C2772744C9D4E0DFB /* EosioRpcProvider.swift in Sources */,
+				C5B37CBA40F1D92DE36E99DD7ABAA04E /* EosioRpcProviderEndpointsCallbacks.swift in Sources */,
+				CEE84F22083E82E5D716207956993CB0 /* EosioRpcProviderEndpointsForProtocol.swift in Sources */,
+				E78604E252BF91A2D5DCAD8A9F811878 /* EosioRpcProviderEndpointsPromises.swift in Sources */,
+				00F2E5A01C1D1C0EC3DEE1566B118463 /* EosioRpcProviderProtocol.swift in Sources */,
+				6624D3B101391579CF8463C939B839BC /* EosioSerializationProviderProtocol.swift in Sources */,
+				C9EA1219A95AE6DE2FCF4500BC63EC18 /* EosioSignatureProviderProtocol.swift in Sources */,
+				C599EFA749034425555F7AF462EB22DD /* EosioSwift-dummy.m in Sources */,
+				EEB2D3E04E23863E973EBA805CBFB469 /* EosioTransaction.swift in Sources */,
+				EB08319C956C57100150C3B78A7A4AF8 /* EosioTransactionAbis.swift in Sources */,
+				2E5FD2726D478A1D409A61EFC1C84CCE /* EosioTransactionAction.swift in Sources */,
+				686A24FF04C5BCA4FD04F707B0AA492B /* EosioTransactionFactory.swift in Sources */,
+				4E62725F16C6E562B845BD007550CA6F /* EosioTransactionPromises.swift in Sources */,
+				262371DB02635DCA60CC73EFD438E78A /* EosioUInt64.swift in Sources */,
+				84C65DF7AC0BFB3BC05A5B5416DDE425 /* LinkedList.swift in Sources */,
+				2DB14C169854DB914A075BBCC54F078C /* Queue.swift in Sources */,
+				9F2C7754D4FB2E11648B67DAC4C1F4AE /* RequestModels.swift in Sources */,
+				49FDFE1C289E086C6D29B6D035B4221B /* ResolverExtensions.swift in Sources */,
+				6E2E49FE15981A36E97B99F604F75E02 /* RIPEMD160.swift in Sources */,
+				D910CFB64DF7CE6A034FD6351A265534 /* RpcProviderRequestModels.swift in Sources */,
+				D834B0FEA95FF2052FE986CF3EBDDAF3 /* RpcProviderResponseModels.swift in Sources */,
+				0C5085EE26B312E50A649C78BEF752F7 /* StringExtensions.swift in Sources */,
+				CE4569B73F9C2A0A434436635558FD59 /* ZAssert.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA80BB2015D639AC31FAF7A1ED97B5BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9E5D4104CDC4C0422D739A2072B2F56 /* Pods-EOSBlockSampleUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A13B599C2E16CC7F91CB6E46FE0F164 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SipHash;
+			target = 377DAE4050D766B30C3A484B8525BB35 /* SipHash */;
+			targetProxy = 2C0D33FA038FFEE0EB2C146368C7D0BE /* PBXContainerItemProxy */;
+		};
+		1D8DEFD4F04A3AEA598D784E56D38F96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromiseKit;
+			target = 7C579CE66A1E7A9AA33CA5F97F9C22C5 /* PromiseKit */;
+			targetProxy = 14844E4C5A9BBC3C3F4C54C3DC1355AE /* PBXContainerItemProxy */;
+		};
+		2BAD28D309DA86702176965EBB151A8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BigInt;
+			target = 09DD83B7D075842A3A5105AD410BD38A /* BigInt */;
+			targetProxy = B01904CB0EFE9FF17D12ED33BEDD7145 /* PBXContainerItemProxy */;
+		};
+		3035A98C6530F3D23F0759A0624D5E27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromiseKit;
+			target = 7C579CE66A1E7A9AA33CA5F97F9C22C5 /* PromiseKit */;
+			targetProxy = 7CF9877D008A0BDD3A64338E2B7B90A9 /* PBXContainerItemProxy */;
+		};
+		54605A478FC1772327B8C88ED51CD239 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BigInt;
+			target = 09DD83B7D075842A3A5105AD410BD38A /* BigInt */;
+			targetProxy = AB703F839BE10C97D66143A25F122A47 /* PBXContainerItemProxy */;
+		};
+		820B4B5BADC0664359C1BD1AB90E2DFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SipHash;
+			target = 377DAE4050D766B30C3A484B8525BB35 /* SipHash */;
+			targetProxy = 5C1F831495FCCA4E87C92D9A505DF56F /* PBXContainerItemProxy */;
+		};
+		88BFFF07C644C980395779A765ECC1CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SipHash;
+			target = 377DAE4050D766B30C3A484B8525BB35 /* SipHash */;
+			targetProxy = 6741475C49FCFB2BBF7958827A1C61A1 /* PBXContainerItemProxy */;
+		};
+		AD6F72571C4E91E1FD04A4AC9A5317D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BigInt;
+			target = 09DD83B7D075842A3A5105AD410BD38A /* BigInt */;
+			targetProxy = 07291E4A02176C1F60FB77BA3969A216 /* PBXContainerItemProxy */;
+		};
+		B72BD74430D979FE77FB52646DFED91A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-EOSBlockSample";
+			target = 7C2933D831299EAE93A4B903D7713D51 /* Pods-EOSBlockSample */;
+			targetProxy = E6BB57647F5A43D07AD0814B0763D1BA /* PBXContainerItemProxy */;
+		};
+		BEB8B50373448388F64FF75D16C70D76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EosioSwift;
+			target = 48DD11FE3425410A409E55A889EACD4E /* EosioSwift */;
+			targetProxy = E370859AFF2B285C207DC61EE516CBFF /* PBXContainerItemProxy */;
+		};
+		C06B133FCF71277A0714790B0DE81DEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SipHash;
+			target = 377DAE4050D766B30C3A484B8525BB35 /* SipHash */;
+			targetProxy = 54AFE977F9C16DB42CCDB525692406FE /* PBXContainerItemProxy */;
+		};
+		C851D158588DB11407BBA41DC7F57B77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromiseKit;
+			target = 7C579CE66A1E7A9AA33CA5F97F9C22C5 /* PromiseKit */;
+			targetProxy = CFDCDD4C02E66174499A2708C3A268E1 /* PBXContainerItemProxy */;
+		};
+		CAF8361F1E6A67CFCCE7D6ADD95EE98E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EosioSwift;
+			target = 48DD11FE3425410A409E55A889EACD4E /* EosioSwift */;
+			targetProxy = 8A04DCD3DB4345154C7E18E91F3AE7E4 /* PBXContainerItemProxy */;
+		};
+		CF3BD63C99A223B92D5413967624BD8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-EOSBlockSample";
+			target = 7C2933D831299EAE93A4B903D7713D51 /* Pods-EOSBlockSample */;
+			targetProxy = EAB1192DF8C60D4E7037888206E0214B /* PBXContainerItemProxy */;
+		};
+		E5933EB0696F0E5223F7DE1F2DE88E9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromiseKit;
+			target = 7C579CE66A1E7A9AA33CA5F97F9C22C5 /* PromiseKit */;
+			targetProxy = 2D2B05E4F808F0704B917806151C347A /* PBXContainerItemProxy */;
+		};
+		F0ED19D0C31CFC87FB47B8168B1A35DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BigInt;
+			target = 09DD83B7D075842A3A5105AD410BD38A /* BigInt */;
+			targetProxy = 093F86903684D49DE240D0DE94A2FD52 /* PBXContainerItemProxy */;
+		};
+		F12E1A1D5C05996C950E95ED1F9AB351 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EosioSwift;
+			target = 48DD11FE3425410A409E55A889EACD4E /* EosioSwift */;
+			targetProxy = 23D3AA9708B45355F9355E2B71F74F8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		037E89CC9391146EC24A301DCFEA898F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 428C0CB398CEFE976792C7BC7BFCD394 /* Pods-EOSBlockSampleUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EOSBlockSampleUITests/Pods-EOSBlockSampleUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EOSBlockSampleUITests/Pods-EOSBlockSampleUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		133ACA622A7543EDCCF97463358AB46C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49C2475472EB1162C97172A3E5E48BEB /* Pods-EOSBlockSampleUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EOSBlockSampleUITests/Pods-EOSBlockSampleUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EOSBlockSampleUITests/Pods-EOSBlockSampleUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2625B195E0D9BFD2D98623182D22530A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A455080EA6A290EA7045C01476B3D0F /* Pods-EOSBlockSample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EOSBlockSample/Pods-EOSBlockSample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EOSBlockSample/Pods-EOSBlockSample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		26E1ADA22E7B873049799CA29FA2AFC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2ECFE1ED761350BC37D7B8D56913214 /* BigInt.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BigInt/BigInt-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BigInt/BigInt-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BigInt/BigInt.modulemap";
+				PRODUCT_MODULE_NAME = BigInt;
+				PRODUCT_NAME = BigInt;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		35D242633C68C678B63EFFEF87DB02DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2ECFE1ED761350BC37D7B8D56913214 /* BigInt.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BigInt/BigInt-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BigInt/BigInt-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BigInt/BigInt.modulemap";
+				PRODUCT_MODULE_NAME = BigInt;
+				PRODUCT_NAME = BigInt;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		551713FF6D344396EE33FB1D56A2288F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 144773363482C9223FC66CC73A240641 /* SipHash.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SipHash/SipHash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SipHash/SipHash-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SipHash/SipHash.modulemap";
+				PRODUCT_MODULE_NAME = SipHash;
+				PRODUCT_NAME = SipHash;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5D9179E297EC0B20AAE0040877157594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 933C7C0969D5EADCE80AF8FED66F63BE /* Pods-EOSBlockSampleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EOSBlockSampleTests/Pods-EOSBlockSampleTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EOSBlockSampleTests/Pods-EOSBlockSampleTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6410F571BA8C1AEC6A19403F1B61B0B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7E76628FDDA4BD882DAF6F67AD19E334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5B659BF6A5052886584743ED742B584 /* Pods-EOSBlockSample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EOSBlockSample/Pods-EOSBlockSample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EOSBlockSample/Pods-EOSBlockSample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9302C71E39A1634E08CED1889B9593B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2234986C4AA2AF1AD8B0DB8BA2798DD0 /* EosioSwift.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EosioSwift/EosioSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EosioSwift/EosioSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/EosioSwift/EosioSwift.modulemap";
+				PRODUCT_MODULE_NAME = EosioSwift;
+				PRODUCT_NAME = EosioSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		97980DB291DD076969DABFB66BD2E553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 144773363482C9223FC66CC73A240641 /* SipHash.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SipHash/SipHash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SipHash/SipHash-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SipHash/SipHash.modulemap";
+				PRODUCT_MODULE_NAME = SipHash;
+				PRODUCT_NAME = SipHash;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A27713CB74E99AF202AADC23200A32F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		DEE9070168463DB147E026201E86F623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2234986C4AA2AF1AD8B0DB8BA2798DD0 /* EosioSwift.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EosioSwift/EosioSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EosioSwift/EosioSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/EosioSwift/EosioSwift.modulemap";
+				PRODUCT_MODULE_NAME = EosioSwift;
+				PRODUCT_NAME = EosioSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EA42416DB374BCA36B971A2380D4F8CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E70622C3F74C8FE51A92B8DD7D68EDF8 /* PromiseKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PromiseKit/PromiseKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PromiseKit/PromiseKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PromiseKit/PromiseKit.modulemap";
+				PRODUCT_MODULE_NAME = PromiseKit;
+				PRODUCT_NAME = PromiseKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EA54A30C49A3CEA52CBADAA6C12B376A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75E387AD78152538163B80FEB16B9EBB /* Pods-EOSBlockSampleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EOSBlockSampleTests/Pods-EOSBlockSampleTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EOSBlockSampleTests/Pods-EOSBlockSampleTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F2C4296F002654E461AD128177D28218 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E70622C3F74C8FE51A92B8DD7D68EDF8 /* PromiseKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PromiseKit/PromiseKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PromiseKit/PromiseKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PromiseKit/PromiseKit.modulemap";
+				PRODUCT_MODULE_NAME = PromiseKit;
+				PRODUCT_NAME = PromiseKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21020C076CD3EA7320B9977C7D1E7655 /* Build configuration list for PBXNativeTarget "Pods-EOSBlockSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2625B195E0D9BFD2D98623182D22530A /* Debug */,
+				7E76628FDDA4BD882DAF6F67AD19E334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3272F7DC679A387A652228C5B259A1B6 /* Build configuration list for PBXNativeTarget "SipHash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				551713FF6D344396EE33FB1D56A2288F /* Debug */,
+				97980DB291DD076969DABFB66BD2E553 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C655F71A0CA9757032246EFA0B6361C /* Build configuration list for PBXNativeTarget "EosioSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9302C71E39A1634E08CED1889B9593B7 /* Debug */,
+				DEE9070168463DB147E026201E86F623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6410F571BA8C1AEC6A19403F1B61B0B5 /* Debug */,
+				A27713CB74E99AF202AADC23200A32F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5057ECF428851569626BB96F79B34636 /* Build configuration list for PBXNativeTarget "Pods-EOSBlockSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA54A30C49A3CEA52CBADAA6C12B376A /* Debug */,
+				5D9179E297EC0B20AAE0040877157594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B04BFC18BF1FC640F18A367CDBA037EA /* Build configuration list for PBXNativeTarget "PromiseKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA42416DB374BCA36B971A2380D4F8CB /* Debug */,
+				F2C4296F002654E461AD128177D28218 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B62CBA5C84C59088B5280F5468A5E982 /* Build configuration list for PBXNativeTarget "BigInt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35D242633C68C678B63EFFEF87DB02DC /* Debug */,
+				26E1ADA22E7B873049799CA29FA2AFC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD07F27F6151333CF4737E6722CB70CE /* Build configuration list for PBXNativeTarget "Pods-EOSBlockSampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				133ACA622A7543EDCCF97463358AB46C /* Debug */,
+				037E89CC9391146EC24A301DCFEA898F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

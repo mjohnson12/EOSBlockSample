@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import EosioSwift
 
 final class BlockListViewController: UIViewController {
 
     @IBOutlet private var blockTableView: UITableView!
     @IBOutlet var activityView: UIActivityIndicatorView!
-    private let viewModel: BlockListVMContract = BlockListVM(providerType: EOSIORpcApiProvider.self)
+    private let viewModel: BlockListVMContract = BlockListVM(provider: EosioRpcProvider(endpoint: URL(string: "https://api.eosnewyork.io/v1")!))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +69,7 @@ extension BlockListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "defaultIdentifier", for: indexPath)
         
         let block = viewModel.loadedBlocks[indexPath.row]
-        cell.textLabel?.text = "Block \(block.1.block_num)"
+        cell.textLabel?.text = "Block \(block.1.blockNum.value)"
         cell.textLabel?.accessibilityIdentifier = "row\(indexPath.row)"
         
         return cell

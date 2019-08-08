@@ -25,7 +25,7 @@ final class BlockDetailVM: BlockDetailVMContract {
         return "\(blockDataAndResponse.1.transactions.count) transaction" + (blockDataAndResponse.1.transactions.count == 1 ? "" : "s")
     }
     var producerSignature: String {
-        return blockDataAndResponse.1.producer_signature
+        return blockDataAndResponse.1.producerSignature
     }
     var blockJSON: String? {
         return String(data: blockDataAndResponse.0, encoding: String.Encoding.utf8)

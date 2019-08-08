@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import EosioSwift
 @testable import EOSBlockSample
 
 class BlockListVMTests: XCTestCase {
@@ -21,8 +22,9 @@ class BlockListVMTests: XCTestCase {
     
     /// Tests that the default 20 blocks are loaded when the reload button is pressed.
     func testSuccess() {
-        let blockListVM = BlockListVM(providerType: MockSuccessRpcApiProvider.self)
-        let expectation = XCTestExpectation(description: "Block list loading complete with successful load")
+        let provider = MockSuccessRpcApiProvider()
+        let blockListVM = BlockListVM(provider: provider)
+        let expectation = XCTestExpectation(description: "Block list loading complete with successful load.")
         
         blockListVM.loadingCompletionBlock = { (error) in
             XCTAssertEqual(blockListVM.loadedBlocks.count, 20)
@@ -33,13 +35,16 @@ class BlockListVMTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
-    /// Tests if the info request fails with a 400 that the load completes with a http request failed 400 error.
-    func testInfo400Failure() {
-        let blockListVM = BlockListVM(providerType: MockInfoFail400RpcApiProvider.self)
-        let expectation = XCTestExpectation(description: "Block list loading complete with http failure status code 400")
+    
+    /// Tests if the info request fails and load completes with a getInfoError error.
+    func testInfoFailure() {
+        let provider = MockInfoFailRpcApiProvider()
+        let blockListVM = BlockListVM(provider: provider)
+        let expectation = XCTestExpectation(description: "Block list loading complete with getInfoError.")
         
         blockListVM.loadingCompletionBlock = { (error) in
-            XCTAssertEqual(error! as? EOSIORpcApiProvider.EOSIORpcApiProviderError, .httpRequestFailed(400))
+            let eosioError = error! as! EosioError
+            XCTAssertEqual(eosioError.errorCode, EosioErrorCode.getInfoError)
             expectation.fulfill()
         }
         
@@ -47,13 +52,15 @@ class BlockListVMTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
-    /// Tests if the block request fails with a 400 that the load completes with a http request failed 400 error.
-    func testBlock400Failure() {
-        let blockListVM = BlockListVM(providerType: MockBlockFail400RpcApiProvider.self)
-        let expectation = XCTestExpectation(description: "Block list loading complete with http failure status code 400")
+    /// Tests if the block request fails and load completes with a getBlockError error.
+    func testBlockFailure() {
+        let provider = MockBlockFailRpcApiProvider()
+        let blockListVM = BlockListVM(provider: provider)
+        let expectation = XCTestExpectation(description: "Block list loading complete with getInfoError.")
         
         blockListVM.loadingCompletionBlock = { (error) in
-            XCTAssertEqual(error! as? EOSIORpcApiProvider.EOSIORpcApiProviderError, .httpRequestFailed(400))
+            let eosioError = error! as! EosioError
+            XCTAssertEqual(eosioError.errorCode, EosioErrorCode.getBlockError)
             expectation.fulfill()
         }
         
@@ -61,9 +68,9 @@ class BlockListVMTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
-    /// Tests if only one block is returned from the provider is that what is in the loaded blocks after loading completes.
     func testOneBlockReturnedSuccess() {
-        let blockListVM = BlockListVM(providerType: MockOneBlockReturnedRpcApiProvider.self)
+        let provider = MockOneBlockReturnedRpcApiProvider()
+        let blockListVM = BlockListVM(provider: provider)
         let expectation = XCTestExpectation(description: "Block list loading complete with only 1 block.")
         
         blockListVM.loadingCompletionBlock = { (error) in
