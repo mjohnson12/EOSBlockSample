@@ -18,6 +18,8 @@ final class BlockListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Set title
+        self.title = "Blocks"
         // Set the datasource and delegate.
         blockTableView.dataSource = self
         blockTableView.delegate = self

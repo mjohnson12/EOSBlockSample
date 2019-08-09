@@ -32,7 +32,7 @@ class EOSBlockSampleUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         let app = XCUIApplication()
-        app.navigationBars["EOSBlockSample.BlockListView"].buttons["Refresh"].tap()
+        app.navigationBars["Blocks"].buttons["Refresh"].tap()
         XCTAssert(app.tables["blockTable"]/*@START_MENU_TOKEN@*/.staticTexts["row0"]/*[[".cells",".staticTexts[\"Block 72959259\"]",".staticTexts[\"row0\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.waitForExistence(timeout: 10))
         app.tables["blockTable"]/*@START_MENU_TOKEN@*/.staticTexts["row0"]/*[[".cells",".staticTexts[\"Block 72959259\"]",".staticTexts[\"row0\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
         XCTAssert(app.staticTexts["producerLabel"].waitForExistence(timeout: 10))
@@ -44,7 +44,7 @@ class EOSBlockSampleUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         let app = XCUIApplication()
-        app.navigationBars["EOSBlockSample.BlockListView"].buttons["Refresh"].tap()
+        app.navigationBars["Blocks"].buttons["Refresh"].tap()
         XCTAssert(app.tables["blockTable"]/*@START_MENU_TOKEN@*/.staticTexts["row0"]/*[[".cells",".staticTexts[\"Block 72959259\"]",".staticTexts[\"row0\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.waitForExistence(timeout: 10))
         app.tables["blockTable"]/*@START_MENU_TOKEN@*/.staticTexts["row0"]/*[[".cells",".staticTexts[\"Block 72959259\"]",".staticTexts[\"row0\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
         XCTAssert(app.staticTexts["producerLabel"].waitForExistence(timeout: 10))

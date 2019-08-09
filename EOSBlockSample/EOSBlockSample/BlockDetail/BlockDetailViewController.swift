@@ -28,6 +28,8 @@ final class BlockDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Set title
+        self.title = "Block Detail"
         // Set the controls to the values in the view model.
         producerLabel.text = viewModel.producer
         transactionsCountLabel.text = viewModel.transactionCount
