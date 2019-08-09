@@ -2,7 +2,7 @@
 Sample application that loads the latest 20 blocks from the EOS public node endpoint.
 
 Block list:
-![BlockList](https://user-images.githubusercontent.com/5863761/62717492-fe769b00-b9d1-11e9-818e-bca4c1189970.png)
+![BlockList](https://user-images.githubusercontent.com/5863761/62791818-f125e300-ba9b-11e9-9691-15acdcb7dee9.png)
 
 Block detail:
-![BlockDetail](https://user-images.githubusercontent.com/5863761/62717562-1e0dc380-b9d2-11e9-8b92-0512571597a5.png)
+![BlockDetail](https://user-images.githubusercontent.com/5863761/62791829-fa16b480-ba9b-11e9-8114-953eefacedd1.png)
