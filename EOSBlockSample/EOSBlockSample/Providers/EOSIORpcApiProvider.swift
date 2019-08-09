@@ -11,8 +11,8 @@ import Foundation
 typealias EOSIOGetBlockDataAndResponse = (Data, EOSIOGetBlockResponse)
 
 protocol EOSIORpcApiProviderContract {
-    static func getInfo(timeout: TimeInterval, completion: @escaping (EOSIOGetInfoResponse?, Error?) -> ())
-    static func getBlock(blockRequest: EOSIOGetBlockRequest, timeout: TimeInterval, completion: @escaping (EOSIOGetBlockDataAndResponse?, Error?) -> ())
+    static func getInfo(timeout: TimeInterval, completion: @escaping (Result<EOSIOGetInfoResponse, Error>) -> ())
+    static func getBlock(blockRequest: EOSIOGetBlockRequest, timeout: TimeInterval, completion: @escaping (Result<EOSIOGetBlockDataAndResponse, Error>) -> ())
 }
 
 final class EOSIORpcApiProvider: EOSIORpcApiProviderContract {
@@ -37,10 +37,10 @@ final class EOSIORpcApiProvider: EOSIORpcApiProviderContract {
         case baseURL = "https://api.eosnewyork.io/v1"
     }
     
-    static func getEntity<T>(path: String, requestBody: Data? = nil, timeout: TimeInterval, serializer: @escaping (Data) throws -> T, completion: @escaping (T?, Error?) -> ()) {
+    static func getEntity<T>(path: String, requestBody: Data? = nil, timeout: TimeInterval, serializer: @escaping (Data) throws -> T, completion: @escaping (Result<T, Error>) -> ()) {
         // Create the url for the provider.
         guard let url = URL(string: EOSIORpcApiProviderURLs.baseURL.rawValue+path) else {
-            completion(nil, EOSIORpcApiProviderError.urlCreationFailed)
+            completion(.failure(EOSIORpcApiProviderError.urlCreationFailed))
             return
         }
         
@@ -62,37 +62,36 @@ final class EOSIORpcApiProvider: EOSIORpcApiProviderContract {
         
         // Create a datatask to call the provider.
         let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            var errorToReturn: Error? = nil
-            var entityToReturn: T? = nil
+            let result: Result<T, Error>
             
-            if error != nil {
+            if let error = error {
                 // The request returned an error so use that for the error to return.
-                errorToReturn = error
+                result = .failure(error)
             } else if let httpResponse: HTTPURLResponse = response as? HTTPURLResponse, !(200..<300).contains(httpResponse.statusCode) {
                 // If the http status code is not within the success range return it as an error.
-                errorToReturn = EOSIORpcApiProviderError.httpRequestFailed(httpResponse.statusCode)
+                result = .failure(EOSIORpcApiProviderError.httpRequestFailed(httpResponse.statusCode))
             }
             else if let data = data {
                 if data.count <= 0 {
                     // No data came down from the provider even though the status code was successful.
-                    errorToReturn = EOSIORpcApiProviderError.noDataReturned
+                    result = .failure(EOSIORpcApiProviderError.noDataReturned)
                 } else {
                     do {
                         // Deserialize the data into an object.
-                        entityToReturn = try serializer(data)
+                        result = .success(try serializer(data))
                     }
                     catch {
                         // The de-serialize failed so return the caught error.
-                        errorToReturn = error
+                        result = .failure(error)
                     }
                 }
             } else {
                 // Data is null so no data was returned even though the http status code is successful.
-                errorToReturn = EOSIORpcApiProviderError.noDataReturned
+                result = .failure(EOSIORpcApiProviderError.noDataReturned)
             }
             
             // Call the completion block and return the de-serialized object or error.
-            completion(entityToReturn, errorToReturn)
+            completion(result)
         }
         
         dataTask.resume()
@@ -103,7 +102,7 @@ final class EOSIORpcApiProvider: EOSIORpcApiProviderContract {
         return try decoder.decode(EOSIOGetInfoResponse.self, from: jsonData)
     }
     
-    static func getInfo(timeout: TimeInterval, completion: @escaping (EOSIOGetInfoResponse?, Error?) -> ()) {
+    static func getInfo(timeout: TimeInterval, completion: @escaping (Result<EOSIOGetInfoResponse, Error>) -> ()) {
         let path: String = "/chain/get_info"
         
         return getEntity(path: path, timeout: timeout, serializer: deserializeInfo, completion: completion)
@@ -115,7 +114,7 @@ final class EOSIORpcApiProvider: EOSIORpcApiProviderContract {
         return (jsonData, blockResponse)
     }
     
-    static func getBlock(blockRequest: EOSIOGetBlockRequest, timeout: TimeInterval, completion: @escaping (EOSIOGetBlockDataAndResponse?, Error?) -> ()) {
+    static func getBlock(blockRequest: EOSIOGetBlockRequest, timeout: TimeInterval, completion: @escaping (Result<EOSIOGetBlockDataAndResponse, Error>) -> ()) {
         let path: String = "/chain/get_block"
         
         let encoder = JSONEncoder()

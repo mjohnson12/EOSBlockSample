@@ -59,7 +59,7 @@ final class BlockListVM: BlockListVMContract {
     private func getBlocks(maxCount: UInt, completion: @escaping ([EOSIOGetBlockDataAndResponse]?, Error?) -> ()) {
         DispatchQueue.global(qos: .default).async {
             // Get the chain info to retrieve the head block.
-            self.providerType.getInfo(timeout: 5) { [weak self] (info, error) in
+            self.providerType.getInfo(timeout: 5) { [weak self] (result) in
                 guard let self = self else {
                     DispatchQueue.main.async {
                         completion(nil, BlockListVMError.strongSelfFailure)
@@ -67,11 +67,12 @@ final class BlockListVM: BlockListVMContract {
                     return
                 }
                 
-                if let info = info {
+                switch result {
+                case .success(let info):
                     print("Info retrieved.  Blockid = \(info.head_block_id)")
                     // Get the head block.
                     self.getBlock(blockID: info.head_block_id, maxCount: maxCount, blocks: [], completion: completion)
-                } else {
+                case .failure(let error):
                     // Failed to get a valid info object so end by calling completion.
                     DispatchQueue.main.async {
                         completion(nil, error)
@@ -85,7 +86,7 @@ final class BlockListVM: BlockListVMContract {
         var blocks = blocks
         let request = EOSIOGetBlockRequest(block_num_or_id: blockID)
         // Get the block by blockID.
-        self.providerType.getBlock(blockRequest: request, timeout: 5){ [weak self] (block, error) in
+        self.providerType.getBlock(blockRequest: request, timeout: 5){ [weak self] (result) in
             guard let self = self else {
                 DispatchQueue.main.async {
                     completion(nil, BlockListVMError.strongSelfFailure)
@@ -93,7 +94,8 @@ final class BlockListVM: BlockListVMContract {
                 return
             }
             
-            if let block = block {
+            switch result {
+            case .success(let block):
                 blocks.append(block)
                 print("Block: \(blocks.count) Previous: \(block.1.previous)")
                 if blocks.count == maxCount {
@@ -105,10 +107,8 @@ final class BlockListVM: BlockListVMContract {
                     // maxCount has not been hit so fetch the previous block by id.
                     self.getBlock(blockID: block.1.previous, maxCount: maxCount, blocks: blocks, completion: completion)
                 }
-            } else {
-                if let error = error {
-                    print("Error: \(error)")
-                }
+            case .failure(let error):
+                print("Error: \(error)")
                 // Failed to get a valid block so end by calling completion.
                 DispatchQueue.main.async {
                     completion(blocks, error)
